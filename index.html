@@ -6,8 +6,9 @@
 <title>Rising Temperatures — Global Climate Data</title>
 <meta name="description" content="An evidence-based look at global temperature rise since 1880. Interactive charts, key statistics, and regional analysis of our warming world.">
 <meta property="og:title" content="Rising Temperatures — Global Climate Data">
-<meta property="og:description" content="Global temperatures have risen 1.2°C since pre-industrial levels. Explore the data.">
+<meta property="og:description" content="Global temperatures have risen 1.28°C since pre-industrial levels. Explore the data.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://hunterhghs.github.io/Rising-Temperatures/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -18,8 +19,8 @@
 html{scroll-behavior:smooth;font-size:16px}
 body{
   font-family:'Hanken Grotesk',-apple-system,sans-serif;
-  background:#0C1322;
-  color:#DCE2F7;
+  background:#1A0E0E;
+  color:#dad7d5;
   line-height:1.6;
   overflow-x:hidden;
 }
@@ -35,17 +36,17 @@ h3{font-size:clamp(1.25rem,2vw,1.5rem);font-weight:500;line-height:1.3}
   font-weight:500;
   letter-spacing:0.1em;
   text-transform:uppercase;
-  color:#DBC2B0;
+  color:#B0A0A0;
 }
-.body-lg{font-size:1.125rem;line-height:1.7;color:#DBC2B0}
+.body-lg{font-size:1.125rem;line-height:1.7;color:#B0A0A0}
 
 /* ===== NAV ===== */
 nav{
   position:sticky;top:0;z-index:100;
-  background:rgba(12,19,34,0.92);
+  background:rgba(26,14,14,0.94);
   backdrop-filter:blur(16px);
   -webkit-backdrop-filter:blur(16px);
-  border-bottom:1px solid #1F2937;
+  border-bottom:1px solid #3A2020;
 }
 .nav-inner{
   max-width:1280px;margin:0 auto;padding:0 2rem;
@@ -55,34 +56,34 @@ nav{
 .nav-logo{
   display:flex;align-items:center;gap:0.5rem;
   font-family:'Space Grotesk',sans-serif;
-  font-weight:700;font-size:1.125rem;color:#DCE2F7;
+  font-weight:700;font-size:1.125rem;color:#dad7d5;
   text-decoration:none;
 }
 .nav-logo .dot{
   width:10px;height:10px;border-radius:50%;
-  background:linear-gradient(135deg,#D97706,#B91C1C);
+  background:linear-gradient(135deg,#C2410C,#991B1B);
 }
 .nav-links{display:flex;gap:2rem;list-style:none}
 .nav-links a{
-  color:#DBC2B0;text-decoration:none;
+  color:#B0A0A0;text-decoration:none;
   font-size:0.875rem;font-weight:500;
   transition:color 0.2s;
 }
-.nav-links a:hover{color:#FFB77D}
+.nav-links a:hover{color:#C2410C}
 .nav-source-btn{
-  background:transparent;border:1px solid #D97706;color:#D97706;
+  background:transparent;border:1px solid #C2410C;color:#C2410C;
   padding:0.5rem 1rem;border-radius:4px;
   font-family:'Space Grotesk',sans-serif;font-size:0.8rem;font-weight:600;
   cursor:pointer;transition:all 0.2s;
-  text-transform:uppercase;letter-spacing:0.05em;
+  text-transform:uppercase;letter-spacing:0.05em;text-decoration:none;
 }
-.nav-source-btn:hover{background:#D97706;color:#0C1322}
+.nav-source-btn:hover{background:#C2410C;color:#1A0E0E}
 
 /* ===== SECTIONS ===== */
 .section{padding:5rem 2rem}
 .section-inner{max-width:1280px;margin:0 auto}
 .section-label{
-  color:#D97706;margin-bottom:1rem;
+  color:#C2410C;margin-bottom:1rem;
   font-family:'JetBrains Mono',monospace;
   font-size:0.75rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;
 }
@@ -94,29 +95,31 @@ nav{
   overflow:hidden;
 }
 .hero::before{
-  content:'';position:absolute;inset:0;
-  background:radial-gradient(ellipse 80% 60% at 50% 30%,rgba(185,28,28,0.15) 0%,transparent 60%),
-             radial-gradient(ellipse 60% 50% at 80% 70%,rgba(217,119,6,0.1) 0%,transparent 50%);
-  pointer-events:none;
+  content:'';position:absolute;inset:0;pointer-events:none;
+  /* Deep warm radial — brighter/warmer on the right, matching reference image */
+  background:
+    radial-gradient(ellipse 70% 55% at 65% 35%, rgba(153,27,27,0.18) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 45% at 30% 60%, rgba(194,65,12,0.08) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 40% at 50% 20%, rgba(153,27,27,0.10) 0%, transparent 45%);
 }
 .hero-inner{max-width:1280px;margin:0 auto;position:relative;z-index:1}
 .hero-badge{
   display:inline-flex;align-items:center;gap:0.5rem;
-  background:rgba(185,28,28,0.15);border:1px solid rgba(185,28,28,0.3);
+  background:rgba(153,27,27,0.12);border:1px solid rgba(153,27,27,0.25);
   padding:0.4rem 1rem;border-radius:4px;margin-bottom:2rem;
 }
 .hero-badge .pulse{
   width:8px;height:8px;border-radius:50%;
-  background:#B91C1C;animation:pulse 2s infinite;
+  background:#991B1B;animation:pulse 2s infinite;
 }
 @keyframes pulse{
-  0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(185,28,28,0.4)}
-  50%{opacity:0.6;box-shadow:0 0 0 6px rgba(185,28,28,0)}
+  0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(153,27,27,0.4)}
+  50%{opacity:0.6;box-shadow:0 0 0 6px rgba(153,27,27,0)}
 }
-.hero-badge span{font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:#B91C1C;font-weight:500}
-.hero h1{margin-bottom:1.25rem;max-width:720px}
+.hero-badge span{font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:#C2410C;font-weight:500}
+.hero h1{margin-bottom:1.25rem;max-width:720px;color:#dad7d5}
 .hero-subtitle{
-  font-size:1.2rem;color:#DBC2B0;line-height:1.7;
+  font-size:1.2rem;color:#B0A0A0;line-height:1.7;
   max-width:600px;margin-bottom:3rem;
 }
 .hero-stat-grid{
@@ -126,20 +129,22 @@ nav{
   margin-top:2rem;
 }
 .hero-stat{
-  background:#191F2F;border:1px solid #2E3545;
+  background:#241414;border:1px solid #3A2020;
   padding:1.5rem;border-radius:0;
+  transition:border-color 0.3s;
 }
+.hero-stat:hover{border-color:#C2410C}
 .hero-stat .stat-value{
   font-family:'Space Grotesk',sans-serif;
   font-size:2rem;font-weight:700;line-height:1;
   letter-spacing:-0.02em;
-  background:linear-gradient(135deg,#FFB77D,#D97706);
+  background:linear-gradient(135deg,#F59E0B,#C2410C);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;
   background-clip:text;
 }
 .hero-stat .stat-label{
   font-family:'JetBrains Mono',monospace;
-  font-size:0.7rem;color:#DBC2B0;margin-top:0.5rem;
+  font-size:0.7rem;color:#B0A0A0;margin-top:0.5rem;
   text-transform:uppercase;letter-spacing:0.08em;
 }
 
@@ -152,73 +157,73 @@ nav{
   font-family:'Space Grotesk',sans-serif;
   font-size:clamp(5rem,10vw,8rem);
   font-weight:700;line-height:1;letter-spacing:-0.04em;
-  background:linear-gradient(180deg,#FFB4AB 0%,#B91C1C 100%);
+  background:linear-gradient(180deg,#F59E0B 0%,#C2410C 50%,#991B1B 100%);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;
   background-clip:text;
 }
 .big-unit{
   font-family:'Space Grotesk',sans-serif;
-  font-size:1.5rem;font-weight:600;color:#FFB4AB;
+  font-size:1.5rem;font-weight:600;color:#C2410C;
   align-self:flex-start;margin-top:1rem;
 }
 
 /* ===== CHART SECTION ===== */
 .chart-container{
-  background:#191F2F;border:1px solid #2E3545;
+  background:#241414;border:1px solid #3A2020;
   padding:2rem;position:relative;
 }
 .chart-header{
   display:flex;justify-content:space-between;align-items:flex-start;
   margin-bottom:1.5rem;flex-wrap:wrap;gap:1rem;
 }
-.chart-title-group h2{font-size:1.5rem;margin-bottom:0.25rem}
+.chart-title-group h2{font-size:1.5rem;margin-bottom:0.25rem;color:#dad7d5}
 .chart-title-group .label-caps{margin-bottom:0.25rem}
 .chart-controls{display:flex;gap:0.5rem}
 .chart-toggle{
-  background:transparent;border:1px solid #374151;color:#DBC2B0;
+  background:transparent;border:1px solid #3A2020;color:#B0A0A0;
   padding:0.5rem 1rem;font-family:'JetBrains Mono',monospace;
   font-size:0.7rem;cursor:pointer;transition:all 0.2s;
   text-transform:uppercase;letter-spacing:0.05em;
 }
 .chart-toggle.active{
-  background:#D97706;border-color:#D97706;color:#0C1322;
+  background:#C2410C;border-color:#C2410C;color:#1A0E0E;
 }
-.chart-toggle:hover:not(.active){border-color:#D97706;color:#FFB77D}
+.chart-toggle:hover:not(.active){border-color:#C2410C;color:#C2410C}
 .chart-wrap{position:relative;width:100%;height:420px}
 .chart-wrap canvas{width:100%!important}
 
 /* ===== TWO COLUMN ===== */
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
 .chart-annotation{
-  background:#141B2B;border-left:3px solid #D97706;
+  background:#1A0E0E;border-left:3px solid #C2410C;
   padding:1.5rem;margin-top:1.5rem;
 }
-.chart-annotation p{font-size:0.95rem;color:#DBC2B0;line-height:1.7}
-.chart-annotation strong{color:#FFB77D}
+.chart-annotation p{font-size:0.95rem;color:#B0A0A0;line-height:1.7}
+.chart-annotation strong{color:#F59E0B}
 
 /* ===== REGIONAL CARDS ===== */
 .region-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem}
 .region-card{
-  background:#191F2F;border:1px solid #2E3545;padding:1.5rem;
+  background:#241414;border:1px solid #3A2020;padding:1.5rem;
   transition:border-color 0.3s;
 }
-.region-card:hover{border-color:#D97706}
-.region-card h3{margin-bottom:0.5rem}
+.region-card:hover{border-color:#C2410C}
+.region-card h3{margin-bottom:0.5rem;color:#dad7d5}
 .region-warming{
   font-family:'Space Grotesk',sans-serif;
   font-size:2.5rem;font-weight:700;line-height:1;
-  color:#FFB77D;margin:0.75rem 0 0.25rem;
+  color:#C2410C;margin:0.75rem 0 0.25rem;
 }
 .region-period{
   font-family:'JetBrains Mono',monospace;
-  font-size:0.7rem;color:#DBC2B0;text-transform:uppercase;letter-spacing:0.05em;
+  font-size:0.7rem;color:#B0A0A0;text-transform:uppercase;letter-spacing:0.05em;
 }
 .region-bar{
-  height:6px;background:#2E3545;margin-top:0.75rem;position:relative;
+  height:6px;background:#3A2020;margin-top:0.75rem;position:relative;
 }
 .region-bar-fill{
   position:absolute;left:0;top:0;height:100%;
-  background:linear-gradient(90deg,#D97706,#B91C1C);
+  background:linear-gradient(90deg,#C2410C,#991B1B);
   transition:width 1.5s ease;
 }
 
@@ -230,60 +235,60 @@ nav{
   display:flex;flex-direction:column;gap:1.5rem;
 }
 .co2-stat{
-  background:#191F2F;border:1px solid #2E3545;padding:1.5rem;
+  background:#241414;border:1px solid #3A2020;padding:1.5rem;
 }
 .co2-stat .big-num{
   font-family:'Space Grotesk',sans-serif;
   font-size:3rem;font-weight:700;line-height:1;
-  background:linear-gradient(135deg,#FDE68A,#D97706);
+  background:linear-gradient(135deg,#F59E0B,#C2410C);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;
   background-clip:text;
 }
 .co2-stat .co2-label{
   font-family:'JetBrains Mono',monospace;
-  font-size:0.7rem;color:#DBC2B0;text-transform:uppercase;letter-spacing:0.08em;margin-top:0.5rem;
+  font-size:0.7rem;color:#B0A0A0;text-transform:uppercase;letter-spacing:0.08em;margin-top:0.5rem;
 }
 
 /* ===== TIMELINE ===== */
 .timeline{position:relative;padding-left:2rem;margin-top:2rem}
 .timeline::before{
   content:'';position:absolute;left:0;top:0;bottom:0;
-  width:2px;background:linear-gradient(180deg,#D97706,#B91C1C,#D97706);
+  width:2px;background:linear-gradient(180deg,#C2410C,#991B1B,#C2410C);
 }
 .timeline-item{margin-bottom:2rem;position:relative}
 .timeline-item::before{
   content:'';position:absolute;left:-2.1rem;top:0.4rem;
-  width:10px;height:10px;border-radius:50%;background:#D97706;
+  width:10px;height:10px;border-radius:50%;background:#C2410C;
 }
 .timeline-year{
   font-family:'JetBrains Mono',monospace;
-  font-size:0.8rem;color:#D97706;font-weight:600;margin-bottom:0.25rem;
+  font-size:0.8rem;color:#C2410C;font-weight:600;margin-bottom:0.25rem;
 }
-.timeline-text{color:#DBC2B0;font-size:0.95rem;line-height:1.6}
+.timeline-text{color:#B0A0A0;font-size:0.95rem;line-height:1.6}
 
 /* ===== SOURCES ===== */
 .sources{
-  border-top:1px solid #1F2937;padding:3rem 2rem;
+  border-top:1px solid #3A2020;padding:3rem 2rem;
 }
 .sources-inner{max-width:1280px;margin:0 auto}
 .sources-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:1.5rem}
 .source-card{
-  background:#141B2B;border:1px solid #1F2937;padding:1.25rem;
+  background:#1A0E0E;border:1px solid #3A2020;padding:1.25rem;
 }
 .source-card .source-org{
   font-family:'JetBrains Mono',monospace;
-  font-size:0.7rem;color:#D97706;text-transform:uppercase;letter-spacing:0.08em;
+  font-size:0.7rem;color:#C2410C;text-transform:uppercase;letter-spacing:0.08em;
 }
-.source-card p{font-size:0.85rem;color:#DBC2B0;margin-top:0.5rem;line-height:1.5}
-.source-card a{color:#FFB77D;text-decoration:none;font-size:0.8rem;margin-top:0.5rem;display:inline-block}
+.source-card p{font-size:0.85rem;color:#B0A0A0;margin-top:0.5rem;line-height:1.5}
+.source-card a{color:#F59E0B;text-decoration:none;font-size:0.8rem;margin-top:0.5rem;display:inline-block}
 
 /* ===== FOOTER ===== */
 footer{
-  background:#070E1D;border-top:1px solid #1F2937;
+  background:#120A0A;border-top:1px solid #3A2020;
   padding:2rem;text-align:center;
 }
-footer p{font-size:0.8rem;color:#6B7280}
-footer .footer-brand{font-family:'Space Grotesk',sans-serif;font-weight:700;color:#DCE2F7;margin-bottom:0.5rem}
+footer p{font-size:0.8rem;color:#6B5555}
+footer .footer-brand{font-family:'Space Grotesk',sans-serif;font-weight:700;color:#dad7d5;margin-bottom:0.5rem}
 
 /* ===== RESPONSIVE ===== */
 @media(max-width:1024px){
@@ -336,7 +341,7 @@ footer .footer-brand{font-family:'Space Grotesk',sans-serif;font-weight:700;colo
   </div>
   <p class="hero-subtitle">
     Global average surface temperature rise above pre-industrial levels (1850–1900 baseline).
-    The last decade was the hottest in approximately <strong>125,000 years</strong>.
+    The last decade was the hottest in approximately <strong style="color:#C2410C">125,000 years</strong>.
   </p>
   <div class="hero-stat-grid">
     <div class="hero-stat">
@@ -399,7 +404,7 @@ footer .footer-brand{font-family:'Space Grotesk',sans-serif;font-weight:700;colo
   <h2>Warming Is Not Uniform</h2>
   <p class="body-lg" style="margin-top:1rem;max-width:720px">
     Temperature rise varies dramatically by region. The Arctic is warming nearly
-    <strong>four times faster</strong> than the global average — a phenomenon known as Arctic amplification.
+    <strong style="color:#C2410C">four times faster</strong> than the global average — a phenomenon known as Arctic amplification.
   </p>
   <div class="region-grid">
     <div class="region-card">
@@ -408,7 +413,7 @@ footer .footer-brand{font-family:'Space Grotesk',sans-serif;font-weight:700;colo
       <div class="region-warming">+3.8°C</div>
       <div class="region-period">Warming since 1970</div>
       <div class="region-bar"><div class="region-bar-fill" style="width:95%"></div></div>
-      <p style="color:#DBC2B0;font-size:0.85rem;margin-top:0.75rem;line-height:1.5">
+      <p style="color:#B0A0A0;font-size:0.85rem;margin-top:0.75rem;line-height:1.5">
         Arctic amplification driven by sea ice loss and the ice-albedo feedback loop.
         Winter temperatures in parts of the Arctic have risen over 6°C.
       </p>
@@ -419,7 +424,7 @@ footer .footer-brand{font-family:'Space Grotesk',sans-serif;font-weight:700;colo
       <div class="region-warming">+2.2°C</div>
       <div class="region-period">Warming since pre-industrial</div>
       <div class="region-bar"><div class="region-bar-fill" style="width:65%"></div></div>
-      <p style="color:#DBC2B0;font-size:0.85rem;margin-top:0.75rem;line-height:1.5">
+      <p style="color:#B0A0A0;font-size:0.85rem;margin-top:0.75rem;line-height:1.5">
         Europe is the fastest-warming inhabited continent. Summer heatwaves are
         now 10× more likely due to climate change.
       </p>
@@ -430,7 +435,7 @@ footer .footer-brand{font-family:'Space Grotesk',sans-serif;font-weight:700;colo
       <div class="region-warming">+0.9°C</div>
       <div class="region-period">Warming since 1900</div>
       <div class="region-bar"><div class="region-bar-fill" style="width:45%"></div></div>
-      <p style="color:#DBC2B0;font-size:0.85rem;margin-top:0.75rem;line-height:1.5">
+      <p style="color:#B0A0A0;font-size:0.85rem;margin-top:0.75rem;line-height:1.5">
         Oceans have absorbed 90% of excess heat. Marine heatwaves have doubled
         in frequency since 1982, devastating coral reefs worldwide.
       </p>
@@ -446,7 +451,7 @@ footer .footer-brand{font-family:'Space Grotesk',sans-serif;font-weight:700;colo
   <h2>CO₂: The Primary Culprit</h2>
   <p class="body-lg" style="margin-top:1rem;max-width:720px">
     Atmospheric CO₂ has risen from ~280 ppm in pre-industrial times to over 420 ppm today —
-    a level not seen in at least <strong>2 million years</strong>. The correlation with temperature rise
+    a level not seen in at least <strong style="color:#C2410C">2 million years</strong>. The correlation with temperature rise
     is one of the strongest signals in all of science.
   </p>
   <div class="co2-highlight">
@@ -480,7 +485,7 @@ footer .footer-brand{font-family:'Space Grotesk',sans-serif;font-weight:700;colo
   <div class="chart-container">
     <div class="chart-title-group" style="margin-bottom:1.5rem">
       <span class="label-caps">The Smoking Gun</span>
-      <h2 style="font-size:1.5rem;margin-top:0.25rem">Temperature vs. CO₂ Concentration</h2>
+      <h2 style="font-size:1.5rem;margin-top:0.25rem;color:#dad7d5">Temperature vs. CO₂ Concentration</h2>
     </div>
     <div class="chart-wrap" style="height:380px"><canvas id="correlationChart"></canvas></div>
     <div class="chart-annotation">
@@ -584,11 +589,9 @@ const nasaAnnualData = [
   2020,1.01,2021,0.85,2022,0.89,2023,1.17,2024,1.28
 ];
 
-/* Parse into arrays */
 const years = [], anomalies = [];
 for(let i=0;i<nasaAnnualData.length;i+=2){years.push(nasaAnnualData[i]);anomalies.push(nasaAnnualData[i+1])}
 
-/* Compute 5-year moving average */
 function movingAvg(arr,window=5){
   const result=[];
   for(let i=0;i<arr.length;i++){
@@ -602,25 +605,18 @@ function movingAvg(arr,window=5){
 }
 const smoothedAnomalies=movingAvg(anomalies);
 
-/* ===== COLOR SCALE ===== */
+/* Warm palette color scale for bars */
 function anomalyColor(val){
-  if(val<0)return 'rgba(100,160,220,0.9)';
-  if(val<0.3)return 'rgba(180,180,180,0.9)';
-  if(val<0.5)return 'rgba(245,200,80,0.9)';
-  if(val<0.8)return 'rgba(245,150,50,0.9)';
-  if(val<1.0)return 'rgba(230,90,40,0.9)';
-  return 'rgba(200,30,30,0.95)';
+  if(val<0)return 'rgba(130,100,90,0.9)';
+  if(val<0.3)return 'rgba(160,120,100,0.9)';
+  if(val<0.5)return 'rgba(200,130,60,0.9)';
+  if(val<0.8)return 'rgba(210,100,30,0.9)';
+  if(val<1.0)return 'rgba(194,65,12,0.9)';
+  return 'rgba(153,27,27,0.95)';
 }
 
 /* ===== TEMPERATURE CHART ===== */
 const ctx=document.getElementById('tempChart').getContext('2d');
-const gradient=ctx.createLinearGradient(0,0,ctx.canvas.width,0);
-gradient.addColorStop(0,'rgba(100,160,220,1)');
-gradient.addColorStop(0.3,'rgba(180,180,180,1)');
-gradient.addColorStop(0.6,'rgba(245,150,50,1)');
-gradient.addColorStop(0.85,'rgba(230,60,20,1)');
-gradient.addColorStop(1,'rgba(200,20,20,1)');
-
 const tempChart=new Chart(ctx,{
   type:'bar',
   data:{
@@ -640,10 +636,10 @@ const tempChart=new Chart(ctx,{
     plugins:{
       legend:{display:false},
       tooltip:{
-        backgroundColor:'#191F2F',
-        titleColor:'#FFB77D',
-        bodyColor:'#DCE2F7',
-        borderColor:'#D97706',borderWidth:1,
+        backgroundColor:'#241414',
+        titleColor:'#F59E0B',
+        bodyColor:'#dad7d5',
+        borderColor:'#C2410C',borderWidth:1,
         titleFont:{family:'JetBrains Mono',size:12},
         bodyFont:{family:'Space Grotesk',size:14,weight:'600'},
         callbacks:{
@@ -654,13 +650,13 @@ const tempChart=new Chart(ctx,{
     },
     scales:{
       x:{
-        ticks:{color:'#6B7280',font:{family:'JetBrains Mono',size:9},maxTicksLimit:20,callback:(v,i)=>years[i]%10===0?years[i]:''},
-        grid:{color:'rgba(55,65,81,0.3)',drawTicks:false}
+        ticks:{color:'#6B5555',font:{family:'JetBrains Mono',size:9},maxTicksLimit:20,callback:(v,i)=>years[i]%10===0?years[i]:''},
+        grid:{color:'rgba(58,32,32,0.4)',drawTicks:false}
       },
       y:{
-        ticks:{color:'#6B7280',font:{family:'JetBrains Mono',size:10},callback:v=>v.toFixed(1)+'°C'},
-        grid:{color:'rgba(55,65,81,0.3)'},
-        title:{display:true,text:'°C vs 1951–1980 Baseline',color:'#DBC2B0',font:{family:'JetBrains Mono',size:10}}
+        ticks:{color:'#6B5555',font:{family:'JetBrains Mono',size:10},callback:v=>v.toFixed(1)+'°C'},
+        grid:{color:'rgba(58,32,32,0.4)'},
+        title:{display:true,text:'°C vs 1951–1980 Baseline',color:'#B0A0A0',font:{family:'JetBrains Mono',size:10}}
       }
     }
   }
@@ -674,11 +670,11 @@ function switchTempView(mode,btn){
   tempChart.data.datasets[0].backgroundColor=(mode==='smooth'?smoothedAnomalies:anomalies).map(a=>anomalyColor(a));
   if(mode==='smooth'){
     tempChart.config.type='line';
-    tempChart.data.datasets[0].borderColor='#D97706';
+    tempChart.data.datasets[0].borderColor='#C2410C';
     tempChart.data.datasets[0].borderWidth=3;
     tempChart.data.datasets[0].pointRadius=0;
     tempChart.data.datasets[0].pointHoverRadius=5;
-    tempChart.data.datasets[0].pointHoverBackgroundColor='#D97706';
+    tempChart.data.datasets[0].pointHoverBackgroundColor='#C2410C';
     tempChart.data.datasets[0].fill=false;
     tempChart.data.datasets[0].tension=0.3;
   }else{
@@ -715,10 +711,10 @@ new Chart(co2ctx,{
     datasets:[{
       label:'Atmospheric CO₂ (ppm)',
       data:co2Values,
-      borderColor:'#FDE68A',
-      backgroundColor:'rgba(253,230,138,0.1)',
+      borderColor:'#F59E0B',
+      backgroundColor:'rgba(245,158,11,0.08)',
       borderWidth:2.5,
-      pointRadius:0,pointHoverRadius:5,pointHoverBackgroundColor:'#FDE68A',
+      pointRadius:0,pointHoverRadius:5,pointHoverBackgroundColor:'#F59E0B',
       fill:true,tension:0.3
     }]
   },
@@ -727,10 +723,10 @@ new Chart(co2ctx,{
     plugins:{
       legend:{display:false},
       tooltip:{
-        backgroundColor:'#191F2F',
-        titleColor:'#FDE68A',
-        bodyColor:'#DCE2F7',
-        borderColor:'#D97706',borderWidth:1,
+        backgroundColor:'#241414',
+        titleColor:'#F59E0B',
+        bodyColor:'#dad7d5',
+        borderColor:'#C2410C',borderWidth:1,
         titleFont:{family:'JetBrains Mono',size:12},
         bodyFont:{family:'Space Grotesk',size:14,weight:'600'},
         callbacks:{
@@ -741,13 +737,13 @@ new Chart(co2ctx,{
     },
     scales:{
       x:{
-        ticks:{color:'#6B7280',font:{family:'JetBrains Mono',size:9},maxTicksLimit:14},
-        grid:{color:'rgba(55,65,81,0.3)'}
+        ticks:{color:'#6B5555',font:{family:'JetBrains Mono',size:9},maxTicksLimit:14},
+        grid:{color:'rgba(58,32,32,0.4)'}
       },
       y:{
-        ticks:{color:'#6B7280',font:{family:'JetBrains Mono',size:10},callback:v=>v+' ppm'},
-        grid:{color:'rgba(55,65,81,0.3)'},
-        title:{display:true,text:'CO₂ (ppm)',color:'#DBC2B0',font:{family:'JetBrains Mono',size:10}}
+        ticks:{color:'#6B5555',font:{family:'JetBrains Mono',size:10},callback:v=>v+' ppm'},
+        grid:{color:'rgba(58,32,32,0.4)'},
+        title:{display:true,text:'CO₂ (ppm)',color:'#B0A0A0',font:{family:'JetBrains Mono',size:10}}
       }
     }
   }
@@ -755,7 +751,6 @@ new Chart(co2ctx,{
 
 /* ===== CORRELATION CHART ===== */
 const corrCtx=document.getElementById('correlationChart').getContext('2d');
-/* Align temp & CO2 from 1960 onwards for scatter */
 const corrPoints=[];
 const startYear=1960;
 for(let i=0;i<years.length;i++){
@@ -772,12 +767,12 @@ new Chart(corrCtx,{
       data:corrPoints.map(p=>({x:p.x,y:p.y})),
       backgroundColor:corrPoints.map(p=>{
         const t=(p.x-310)/(425-310);
-        const r=Math.round(100+t*120);
-        const g=Math.round(160-t*140);
-        const b=Math.round(220-t*200);
+        const r=Math.round(180+t*60);
+        const g=Math.round(100-t*70);
+        const b=Math.round(60-t*45);
         return `rgba(${r},${g},${b},0.8)`;
       }),
-      borderColor:'rgba(217,119,6,0.5)',
+      borderColor:'rgba(194,65,12,0.4)',
       borderWidth:1,
       pointRadius:6,pointHoverRadius:9
     }]
@@ -787,10 +782,10 @@ new Chart(corrCtx,{
     plugins:{
       legend:{display:false},
       tooltip:{
-        backgroundColor:'#191F2F',
-        titleColor:'#FFB77D',
-        bodyColor:'#DCE2F7',
-        borderColor:'#D97706',borderWidth:1,
+        backgroundColor:'#241414',
+        titleColor:'#F59E0B',
+        bodyColor:'#dad7d5',
+        borderColor:'#C2410C',borderWidth:1,
         callbacks:{
           label:ctx=>{
             const p=corrPoints[ctx.dataIndex];
@@ -801,14 +796,14 @@ new Chart(corrCtx,{
     },
     scales:{
       x:{
-        ticks:{color:'#6B7280',font:{family:'JetBrains Mono',size:10},callback:v=>v+' ppm'},
-        grid:{color:'rgba(55,65,81,0.3)'},
-        title:{display:true,text:'Atmospheric CO₂ (ppm)',color:'#DBC2B0',font:{family:'JetBrains Mono',size:10}}
+        ticks:{color:'#6B5555',font:{family:'JetBrains Mono',size:10},callback:v=>v+' ppm'},
+        grid:{color:'rgba(58,32,32,0.4)'},
+        title:{display:true,text:'Atmospheric CO₂ (ppm)',color:'#B0A0A0',font:{family:'JetBrains Mono',size:10}}
       },
       y:{
-        ticks:{color:'#6B7280',font:{family:'JetBrains Mono',size:10},callback:v=>v.toFixed(1)+'°C'},
-        grid:{color:'rgba(55,65,81,0.3)'},
-        title:{display:true,text:'Temperature Anomaly (°C)',color:'#DBC2B0',font:{family:'JetBrains Mono',size:10}}
+        ticks:{color:'#6B5555',font:{family:'JetBrains Mono',size:10},callback:v=>v.toFixed(1)+'°C'},
+        grid:{color:'rgba(58,32,32,0.4)'},
+        title:{display:true,text:'Temperature Anomaly (°C)',color:'#B0A0A0',font:{family:'JetBrains Mono',size:10}}
       }
     }
   }
@@ -828,7 +823,6 @@ function animateCounter(target,el,duration=2000){
   }
   requestAnimationFrame(update);
 }
-/* Trigger on scroll */
 const counterEl=document.getElementById('tempCounter');
 let counterAnimated=false;
 const observer=new IntersectionObserver((entries)=>{
@@ -840,7 +834,6 @@ const observer=new IntersectionObserver((entries)=>{
   });
 },{threshold:0.5});
 observer.observe(counterEl);
-/* Fallback: animate after 500ms if IntersectionObserver doesn't fire */
 setTimeout(()=>{if(!counterAnimated){counterAnimated=true;animateCounter(1.28,counterEl)}},800);
 
 /* ===== ANIMATE REGION BARS ON SCROLL ===== */

@@ -3,89 +3,40 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>ClimateData | Our Warming World</title>
+<title>ClimateData | Our Warming World — Global Climate Intelligence</title>
+<meta name="description" content="Comprehensive climate data and analysis. Global temperature anomalies, CO₂ levels, sea level rise, and climate action intelligence."/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Hanken+Grotesk:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
         theme: {
           extend: {
             "colors": {
-                    "on-tertiary-container": "#4b3f00",
-                    "tertiary": "#dcc66e",
-                    "surface-container": "#191f2f",
-                    "on-primary-fixed-variant": "#6e3900",
-                    "on-tertiary": "#3a3000",
-                    "on-surface": "#dce2f7",
-                    "surface-tint": "#ffb77d",
-                    "surface-container-lowest": "#070e1d",
-                    "on-primary": "#4d2600",
-                    "on-primary-fixed": "#2f1500",
-                    "inverse-on-surface": "#293040",
-                    "error": "#ffb4ab",
-                    "secondary-fixed": "#ffdad6",
-                    "primary-fixed": "#ffdcc3",
-                    "secondary-container": "#a0010d",
-                    "on-secondary-container": "#ffa99f",
-                    "surface-dim": "#0c1322",
-                    "surface-variant": "#2e3545",
-                    "on-tertiary-fixed": "#221b00",
-                    "on-secondary": "#690005",
-                    "background": "#0c1322",
-                    "surface-container-low": "#141b2b",
-                    "error-container": "#93000a",
-                    "outline-variant": "#554336",
-                    "inverse-surface": "#dce2f7",
-                    "on-error-container": "#ffdad6",
-                    "on-secondary-fixed": "#410002",
-                    "tertiary-container": "#bfab56",
-                    "tertiary-fixed": "#f9e287",
-                    "on-surface-variant": "#dbc2b0",
-                    "primary-container": "#d97707",
-                    "on-primary-container": "#432100",
-                    "on-error": "#690005",
-                    "primary": "#ffb77d",
-                    "on-tertiary-fixed-variant": "#534600",
-                    "primary-fixed-dim": "#ffb77d",
-                    "tertiary-fixed-dim": "#dcc66e",
-                    "on-secondary-fixed-variant": "#93000b",
-                    "surface-bright": "#323949",
-                    "surface-container-highest": "#2e3545",
-                    "outline": "#a38c7c",
-                    "on-background": "#dce2f7",
-                    "inverse-primary": "#904d00",
-                    "surface": "#0c1322",
-                    "secondary": "#ffb4ab",
-                    "surface-container-high": "#232a3a",
-                    "secondary-fixed-dim": "#ffb4ab"
+                    "on-tertiary-container": "#4b3f00", "tertiary": "#dcc66e", "surface-container": "#191f2f",
+                    "on-primary-fixed-variant": "#6e3900", "on-tertiary": "#3a3000", "on-surface": "#dce2f7",
+                    "surface-tint": "#ffb77d", "surface-container-lowest": "#070e1d", "on-primary": "#4d2600",
+                    "on-primary-fixed": "#2f1500", "inverse-on-surface": "#293040", "error": "#ffb4ab",
+                    "secondary-fixed": "#ffdad6", "primary-fixed": "#ffdcc3", "secondary-container": "#a0010d",
+                    "on-secondary-container": "#ffa99f", "surface-dim": "#0c1322", "surface-variant": "#2e3545",
+                    "on-tertiary-fixed": "#221b00", "on-secondary": "#690005", "background": "#0c1322",
+                    "surface-container-low": "#141b2b", "error-container": "#93000a", "outline-variant": "#554336",
+                    "inverse-surface": "#dce2f7", "on-error-container": "#ffdad6", "on-secondary-fixed": "#410002",
+                    "tertiary-container": "#bfab56", "tertiary-fixed": "#f9e287", "on-surface-variant": "#dbc2b0",
+                    "primary-container": "#d97707", "on-primary-container": "#432100", "on-error": "#690005",
+                    "primary": "#ffb77d", "on-tertiary-fixed-variant": "#534600", "primary-fixed-dim": "#ffb77d",
+                    "tertiary-fixed-dim": "#dcc66e", "on-secondary-fixed-variant": "#93000b", "surface-bright": "#323949",
+                    "surface-container-highest": "#2e3545", "outline": "#a38c7c", "on-background": "#dce2f7",
+                    "inverse-primary": "#904d00", "surface": "#0c1322", "secondary": "#ffb4ab",
+                    "surface-container-high": "#232a3a", "secondary-fixed-dim": "#ffb4ab"
             },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "spacing": {
-                    "md": "24px",
-                    "grid-margin": "24px",
-                    "sm": "16px",
-                    "lg": "48px",
-                    "base": "4px",
-                    "xl": "80px",
-                    "xs": "8px",
-                    "grid-gutter": "20px"
-            },
+            "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+            "spacing": { "md": "24px", "grid-margin": "24px", "sm": "16px", "lg": "48px", "base": "4px", "xl": "80px", "xs": "8px", "grid-gutter": "20px" },
             "fontFamily": {
-                    "body-md": ["Hanken Grotesk"],
-                    "data-metric": ["Space Grotesk"],
-                    "headline-lg": ["Space Grotesk"],
-                    "headline-lg-mobile": ["Space Grotesk"],
-                    "headline-md": ["Space Grotesk"],
-                    "display-xl": ["Space Grotesk"],
-                    "body-lg": ["Hanken Grotesk"],
-                    "label-caps": ["JetBrains Mono"]
+                    "body-md": ["Hanken Grotesk"], "data-metric": ["Space Grotesk"], "headline-lg": ["Space Grotesk"],
+                    "headline-lg-mobile": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "display-xl": ["Space Grotesk"],
+                    "body-lg": ["Hanken Grotesk"], "label-caps": ["JetBrains Mono"]
             },
             "fontSize": {
                     "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
@@ -102,12 +53,8 @@
       }
     </script>
 <style>
-        @keyframes countUp {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        @keyframes countUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         .animate-count { animation: countUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-        
         .gradient-mesh {
             background: radial-gradient(at 0% 0%, #432100 0%, transparent 50%),
                         radial-gradient(at 100% 0%, #93000a 0%, transparent 50%),
@@ -115,39 +62,31 @@
                         radial-gradient(at 0% 100%, #690005 0%, transparent 50%);
             background-color: #0c1322;
         }
-
-        .metric-card-border {
-            border: 1px solid #374151;
-        }
-        
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-    </style>
+        .metric-card-border { border: 1px solid #374151; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .section-hairline { border-top: 1px solid rgba(85,67,54,0.3); }
+        .data-highlight { background: linear-gradient(135deg, rgba(217,119,7,0.08) 0%, rgba(255,183,125,0.03) 100%); }
+</style>
 </head>
 <body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
-<!-- Top Navigation Bar -->
-<nav class="sticky top-0 z-50 bg-background dark:bg-background border-b border-surface-variant flex justify-between items-center px-grid-margin w-full h-20 max-w-7xl mx-auto">
+<!-- === TOP NAVIGATION === -->
+<nav class="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-surface-variant flex justify-between items-center px-grid-margin w-full h-20 max-w-7xl mx-auto">
 <a href="index.html" class="font-headline-md text-headline-md font-bold text-primary hover:text-white transition-colors">ClimateData</a>
 <div class="hidden md:flex items-center gap-lg">
 <a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md" href="index.html">Home</a>
 <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="global-temps.html">Global Temps</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Carbon Levels</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Sea Rise</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Take Action</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="carbon-levels.html">Carbon Levels</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="sea-rise.html">Sea Rise</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="take-action.html">Take Action</a>
 </div>
-<button class="bg-primary-container text-on-primary-container px-md py-xs rounded-DEFAULT font-bold active:scale-95 duration-100 hover:bg-surface-container-high transition-all">
-            Sign Up
-        </button>
+<button class="bg-primary-container text-on-primary-container px-md py-xs rounded-DEFAULT font-bold active:scale-95 duration-100 hover:bg-surface-container-high transition-all">Sign Up</button>
 </nav>
-<!-- Main Content -->
-<main class="min-h-screen">
-<!-- Hero Section -->
+
+<main>
+<!-- ===== HERO SECTION ===== -->
 <section class="relative w-full min-h-[870px] flex flex-col justify-center items-center overflow-hidden pt-20">
-<!-- Background Layer -->
 <div class="absolute inset-0 z-0 gradient-mesh opacity-80"></div>
 <div class="relative z-10 max-w-7xl mx-auto px-grid-margin grid grid-cols-1 lg:grid-cols-12 gap-lg items-center py-xl w-full">
-<!-- Headline & Content -->
 <div class="lg:col-span-7 space-y-md">
 <div class="inline-flex items-center gap-xs px-sm py-1 bg-secondary-container text-on-secondary-container border border-on-secondary-fixed-variant rounded-DEFAULT animate-pulse">
 <span class="material-symbols-outlined text-[14px]">warning</span>
@@ -157,14 +96,13 @@
                         Our Warming <span class="text-primary">World</span>
 </h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-                        Global temperatures have risen 1.2°C since pre-industrial levels. The last decade was the hottest in 125,000 years. This isn't just data—it's the analytical evidence of a changing planet.
+                        Global temperatures have risen 1.2°C since pre-industrial levels. The last decade was the hottest in 125,000 years. This isn't just data — it's the analytical evidence of a changing planet.
                     </p>
 <div class="flex gap-md pt-sm">
 <a href="global-temps.html" class="bg-primary text-on-primary font-label-caps px-lg py-md hover:bg-white transition-colors duration-300 inline-block">EXPLORE THE DATA</a>
 <button class="border border-outline text-white font-label-caps px-lg py-md hover:bg-surface-variant transition-colors duration-300">VIEW METHODOLOGY</button>
 </div>
 </div>
-<!-- Central Main Feature (Counter) -->
 <div class="lg:col-span-5 flex flex-col items-center justify-center text-center p-lg bg-surface-container/30 backdrop-blur-md metric-card-border rounded-lg relative group">
 <div class="absolute -top-1 left-0 w-full h-[3px] bg-primary"></div>
 <span class="font-label-caps text-label-caps text-primary mb-md block">CURRENT GLOBAL ANOMALY</span>
@@ -179,58 +117,251 @@
 </div>
 </div>
 </section>
-<!-- KPI Row -->
+
+<!-- ===== KPI STAT ROW ===== -->
 <section class="bg-surface-container-lowest py-xl border-y border-surface-variant">
 <div class="max-w-7xl mx-auto px-grid-margin">
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-grid-gutter">
-<!-- KPI Card 1 -->
 <div class="p-md bg-surface-container-low metric-card-border flex flex-col justify-between h-full group hover:bg-surface-container transition-all">
-<div class="flex justify-between items-start mb-md">
-<span class="font-label-caps text-label-caps text-on-surface-variant">CLIMATE MILESTONE</span>
-<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">trending_up</span>
-</div>
+<div class="flex justify-between items-start mb-md"><span class="font-label-caps text-label-caps text-on-surface-variant">CLIMATE MILESTONE</span><span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL'1;">trending_up</span></div>
 <h3 class="font-data-metric text-data-metric text-white mb-xs">2024: Hottest Year on Record</h3>
 <p class="text-[12px] font-body-md text-on-surface-variant opacity-70">Observed temperatures reached unprecedented levels globally.</p>
 </div>
-<!-- KPI Card 2 -->
 <div class="p-md bg-surface-container-low metric-card-border flex flex-col justify-between h-full group hover:bg-surface-container transition-all">
-<div class="flex justify-between items-start mb-md">
-<span class="font-label-caps text-label-caps text-on-surface-variant">DECADAL TREND</span>
-<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">history</span>
-</div>
+<div class="flex justify-between items-start mb-md"><span class="font-label-caps text-label-caps text-on-surface-variant">DECADAL TREND</span><span class="material-symbols-outlined text-secondary" style="font-variation-settings:'FILL'1;">history</span></div>
 <h3 class="font-data-metric text-data-metric text-white mb-xs">10 Warmest Years: All Since 2014</h3>
 <p class="text-[12px] font-body-md text-on-surface-variant opacity-70">Accelerated warming pattern confirmed over the last decade.</p>
 </div>
-<!-- KPI Card 3 -->
 <div class="p-md bg-surface-container-low metric-card-border flex flex-col justify-between h-full group hover:bg-surface-container transition-all">
-<div class="flex justify-between items-start mb-md">
-<span class="font-label-caps text-label-caps text-on-surface-variant">ATMOSPHERIC CO₂</span>
-<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">co2</span>
-</div>
+<div class="flex justify-between items-start mb-md"><span class="font-label-caps text-label-caps text-on-surface-variant">ATMOSPHERIC CO₂</span><span class="material-symbols-outlined text-tertiary" style="font-variation-settings:'FILL'1;">co2</span></div>
 <h3 class="font-data-metric text-data-metric text-white mb-xs">420 ppm CO₂</h3>
 <p class="text-[12px] font-body-md text-on-surface-variant opacity-70">Concentration levels highest in millions of years.</p>
 </div>
-<!-- KPI Card 4 -->
 <div class="p-md bg-surface-container-low metric-card-border flex flex-col justify-between h-full group hover:bg-surface-container transition-all">
-<div class="flex justify-between items-start mb-md">
-<span class="font-label-caps text-label-caps text-on-surface-variant">OCEANIC IMPACT</span>
-<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">waves</span>
-</div>
+<div class="flex justify-between items-start mb-md"><span class="font-label-caps text-label-caps text-on-surface-variant">OCEANIC IMPACT</span><span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL'1;">waves</span></div>
 <h3 class="font-data-metric text-data-metric text-white mb-xs">3.6mm/yr Sea Rise</h3>
 <p class="text-[12px] font-body-md text-on-surface-variant opacity-70">Current annual rate of global mean sea level increase.</p>
 </div>
 </div>
 </div>
 </section>
+
+<!-- ===== THE EVIDENCE: KEY FINDINGS ===== -->
+<section class="bg-background py-xl section-hairline">
+<div class="max-w-7xl mx-auto px-grid-margin">
+<div class="mb-lg">
+<span class="font-label-caps text-label-caps text-primary mb-sm block">THE EVIDENCE</span>
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-white mb-md uppercase tracking-tight">What the Data Tells Us</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">Multiple independent lines of evidence confirm that Earth's climate is warming at an unprecedented rate. Below are the key findings from the latest scientific assessments.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-grid-gutter">
+<div class="p-lg bg-surface-container-low metric-card-border data-highlight">
+<div class="flex items-start gap-md mb-md">
+<span class="material-symbols-outlined text-primary text-3xl">thermostat</span>
+<div>
+<h4 class="font-headline-md text-xl font-bold text-white mb-xs">+1.45°C Above Pre-Industrial</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">The 2024 global average surface temperature exceeded the 1850–1900 baseline by 1.45°C, making it the warmest year in the instrumental record. The past nine years (2016–2024) are the nine warmest on record.</p>
+</div>
+</div>
+<div class="w-full h-1 bg-surface-variant mt-sm"><div class="h-full bg-primary w-[92%] shadow-[0_0_10px_rgba(255,183,125,0.4)]"></div></div>
+</div>
+<div class="p-lg bg-surface-container-low metric-card-border data-highlight">
+<div class="flex items-start gap-md mb-md">
+<span class="material-symbols-outlined text-secondary text-3xl">speed</span>
+<div>
+<h4 class="font-headline-md text-xl font-bold text-white mb-xs">Warming Rate: 0.20°C/Decade</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Since 1980, the rate of warming has more than doubled compared to the preceding century. The current decadal warming rate of 0.20°C is unprecedented in the paleoclimate record.</p>
+</div>
+</div>
+<div class="w-full h-1 bg-surface-variant mt-sm"><div class="h-full bg-secondary w-[78%] shadow-[0_0_10px_rgba(255,180,171,0.4)]"></div></div>
+</div>
+<div class="p-lg bg-surface-container-low metric-card-border data-highlight">
+<div class="flex items-start gap-md mb-md">
+<span class="material-symbols-outlined text-tertiary text-3xl">cloud</span>
+<div>
+<h4 class="font-headline-md text-xl font-bold text-white mb-xs">CO₂ at 420 ppm — 150% of Pre-Industrial</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Atmospheric carbon dioxide concentrations have increased by 50% since 1750, primarily from fossil fuel combustion and land-use change. Current levels exceed anything seen in at least 800,000 years.</p>
+</div>
+</div>
+<div class="w-full h-1 bg-surface-variant mt-sm"><div class="h-full bg-tertiary w-[88%] shadow-[0_0_10px_rgba(220,198,110,0.4)]"></div></div>
+</div>
+<div class="p-lg bg-surface-container-low metric-card-border data-highlight">
+<div class="flex items-start gap-md mb-md">
+<span class="material-symbols-outlined text-primary text-3xl">water</span>
+<div>
+<h4 class="font-headline-md text-xl font-bold text-white mb-xs">Sea Levels Rising at 3.6 mm/yr</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Global mean sea level has risen by approximately 24 cm since 1880, with the rate accelerating. Thermal expansion of warming oceans and melting land ice are the primary drivers.</p>
+</div>
+</div>
+<div class="w-full h-1 bg-surface-variant mt-sm"><div class="h-full bg-primary w-[65%] shadow-[0_0_10px_rgba(255,183,125,0.4)]"></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ===== DATA EXPLORER PREVIEWS ===== -->
+<section class="bg-surface-container-lowest py-xl section-hairline">
+<div class="max-w-7xl mx-auto px-grid-margin">
+<span class="font-label-caps text-label-caps text-primary mb-sm block">EXPLORE THE DATA</span>
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-white mb-lg uppercase tracking-tight">Climate Data Explorer</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-grid-gutter">
+<a href="global-temps.html" class="group block p-lg bg-surface-container-low metric-card-border hover:border-primary/40 transition-all duration-500 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-primary/10 transition-colors"></div>
+<span class="material-symbols-outlined text-primary text-4xl mb-md block">show_chart</span>
+<h3 class="font-headline-md text-lg font-bold text-white mb-sm">Global Temperature Anomaly</h3>
+<p class="font-body-md text-sm text-on-surface-variant mb-md">Interactive 145-year record with NASA GISTEMP data. Explore annual anomalies, decadal trends, and 5-year moving averages.</p>
+<div class="flex items-center gap-xs text-primary font-label-caps text-xs">
+<span>Explore Dataset</span><span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+<a href="carbon-levels.html" class="group block p-lg bg-surface-container-low metric-card-border hover:border-primary/40 transition-all duration-500 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-secondary/10 transition-colors"></div>
+<span class="material-symbols-outlined text-secondary text-4xl mb-md block">co2</span>
+<h3 class="font-headline-md text-lg font-bold text-white mb-sm">Carbon Dioxide Levels</h3>
+<p class="font-body-md text-sm text-on-surface-variant mb-md">The Keeling Curve and beyond. Track atmospheric CO₂ from ice core records to real-time Mauna Loa measurements.</p>
+<div class="flex items-center gap-xs text-secondary font-label-caps text-xs">
+<span>Explore Dataset</span><span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+<a href="sea-rise.html" class="group block p-lg bg-surface-container-low metric-card-border hover:border-primary/40 transition-all duration-500 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-tertiary/5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-tertiary/10 transition-colors"></div>
+<span class="material-symbols-outlined text-tertiary text-4xl mb-md block">waves</span>
+<h3 class="font-headline-md text-lg font-bold text-white mb-sm">Sea Level Rise</h3>
+<p class="font-body-md text-sm text-on-surface-variant mb-md">Satellite altimetry and tide gauge data tracking global and regional sea level change since 1880.</p>
+<div class="flex items-center gap-xs text-tertiary font-label-caps text-xs">
+<span>Explore Dataset</span><span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+</div>
+</div>
+</section>
+
+<!-- ===== CLIMATE TIMELINE ===== -->
+<section class="bg-background py-xl section-hairline">
+<div class="max-w-7xl mx-auto px-grid-margin">
+<span class="font-label-caps text-label-caps text-primary mb-sm block">HISTORICAL CONTEXT</span>
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-white mb-lg uppercase tracking-tight">Climate Milestones: 1880–2024</h2>
+<div class="space-y-0">
+<div class="grid grid-cols-[60px_1fr] md:grid-cols-[100px_1fr] gap-0">
+<div class="flex flex-col items-center">
+<div class="w-3 h-3 rounded-full bg-primary mt-2"></div>
+<div class="w-px h-full bg-outline-variant/40"></div>
+</div>
+<div class="pb-lg pl-md">
+<span class="font-label-caps text-[10px] text-primary tracking-[0.2em]">1880–1910</span>
+<h4 class="font-headline-md text-lg font-bold text-white mb-xs">Early Instrumental Record Begins</h4>
+<p class="font-body-md text-sm text-on-surface-variant">NASA GISTEMP dataset initiates. Global temperatures relatively stable, fluctuating within ±0.3°C of the 1951–1980 baseline. Industrial CO₂ emissions at ~2 billion tonnes annually.</p>
+</div>
+</div>
+<div class="grid grid-cols-[60px_1fr] md:grid-cols-[100px_1fr] gap-0">
+<div class="flex flex-col items-center">
+<div class="w-3 h-3 rounded-full bg-secondary mt-2"></div>
+<div class="w-px h-full bg-outline-variant/40"></div>
+</div>
+<div class="pb-lg pl-md">
+<span class="font-label-caps text-[10px] text-secondary tracking-[0.2em]">1940–1970</span>
+<h4 class="font-headline-md text-lg font-bold text-white mb-xs">The Great Acceleration</h4>
+<p class="font-body-md text-sm text-on-surface-variant">Post-WWII industrial expansion drives rapid emissions growth. CO₂ reaches 325 ppm. Keeling Curve measurements begin at Mauna Loa (1958), providing the first continuous atmospheric CO₂ record.</p>
+</div>
+</div>
+<div class="grid grid-cols-[60px_1fr] md:grid-cols-[100px_1fr] gap-0">
+<div class="flex flex-col items-center">
+<div class="w-3 h-3 rounded-full bg-primary mt-2"></div>
+<div class="w-px h-full bg-outline-variant/40"></div>
+</div>
+<div class="pb-lg pl-md">
+<span class="font-label-caps text-[10px] text-primary tracking-[0.2em]">1980–2000</span>
+<h4 class="font-headline-md text-lg font-bold text-white mb-xs">Warming Acceleration Confirmed</h4>
+<p class="font-body-md text-sm text-on-surface-variant">Global temperatures begin rising at 0.18°C/decade. IPCC First Assessment Report (1990) concludes human activities are substantially increasing greenhouse gas concentrations. 1998 becomes the warmest year on record (at the time) during a super El Niño event.</p>
+</div>
+</div>
+<div class="grid grid-cols-[60px_1fr] md:grid-cols-[100px_1fr] gap-0">
+<div class="flex flex-col items-center">
+<div class="w-3 h-3 rounded-full bg-secondary mt-2"></div>
+<div class="w-px h-full bg-outline-variant/40"></div>
+</div>
+<div class="pb-lg pl-md">
+<span class="font-label-caps text-[10px] text-secondary tracking-[0.2em]">2000–2020</span>
+<h4 class="font-headline-md text-lg font-bold text-white mb-xs">The Warmest Decades in Recorded History</h4>
+<p class="font-body-md text-sm text-on-surface-variant">Every year from 2000–2020 ranks among the warmest on record. Paris Agreement adopted (2015) targeting 1.5°C limit. CO₂ surpasses 400 ppm (2013). Arctic sea ice reaches record minimum (2012).</p>
+</div>
+</div>
+<div class="grid grid-cols-[60px_1fr] md:grid-cols-[100px_1fr] gap-0">
+<div class="flex flex-col items-center">
+<div class="w-3 h-3 rounded-full bg-primary mt-2"></div>
+</div>
+<div class="pb-0 pl-md">
+<span class="font-label-caps text-[10px] text-primary tracking-[0.2em]">2020–2024</span>
+<h4 class="font-headline-md text-lg font-bold text-white mb-xs">Uncharted Territory</h4>
+<p class="font-body-md text-sm text-on-surface-variant">2024 confirmed as hottest year on record at +1.45°C above pre-industrial. CO₂ hits 420 ppm. Nine warmest years all occur since 2014. Accelerating ice loss in Greenland and Antarctica. Global sea level rise rate reaches 3.6 mm/yr.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ===== WHY 1.5°C MATTERS ===== -->
+<section class="bg-surface-container-lowest py-xl section-hairline">
+<div class="max-w-7xl mx-auto px-grid-margin">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div>
+<span class="font-label-caps text-label-caps text-primary mb-sm block">THE THRESHOLD</span>
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-white mb-md uppercase tracking-tight">Why 1.5°C Matters</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-md">The Paris Agreement's 1.5°C target isn't arbitrary. It represents a critical threshold beyond which the risk of triggering irreversible climate tipping points increases dramatically — including ice sheet collapse, permafrost thaw, and ecosystem dieback.</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg">At current emission rates, we are on track to exceed 1.5°C of warming by the early 2030s. Every fraction of a degree matters: limiting warming to 1.5°C instead of 2.0°C would expose 420 million fewer people to extreme heatwaves and reduce the risk of an ice-free Arctic summer from once per decade to once per century.</p>
+<a href="take-action.html" class="inline-flex items-center gap-sm bg-primary text-on-primary font-label-caps px-lg py-md hover:bg-white transition-colors duration-300">
+<span>WHAT CAN BE DONE</span><span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-2 gap-md">
+<div class="p-md bg-surface-container-low metric-card-border">
+<span class="font-display-xl text-5xl text-primary block mb-xs">+1.5°C</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant">Paris Agreement Upper Target</span>
+<div class="w-full h-1 bg-surface-variant mt-sm"><div class="h-full bg-primary w-[95%]"></div></div>
+</div>
+<div class="p-md bg-surface-container-low metric-card-border">
+<span class="font-display-xl text-5xl text-secondary block mb-xs">+2.0°C</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant">Coral Reefs: 99% Decline Risk</span>
+<div class="w-full h-1 bg-surface-variant mt-sm"><div class="h-full bg-secondary w-[75%]"></div></div>
+</div>
+<div class="p-md bg-surface-container-low metric-card-border">
+<span class="font-display-xl text-5xl text-tertiary block mb-xs">+3.0°C</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant">Current Policy Trajectory by 2100</span>
+<div class="w-full h-1 bg-surface-variant mt-sm"><div class="h-full bg-tertiary w-[50%]"></div></div>
+</div>
+<div class="p-md bg-surface-container-low metric-card-border">
+<span class="font-display-xl text-5xl text-red-400 block mb-xs">+4.0°C</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant">Business-as-Usual by 2100</span>
+<div class="w-full h-1 bg-surface-variant mt-sm"><div class="h-full bg-red-400 w-[30%]"></div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ===== STAY INFORMED CTA ===== -->
+<section class="bg-background py-xl section-hairline">
+<div class="max-w-7xl mx-auto px-grid-margin text-center">
+<div class="max-w-2xl mx-auto">
+<span class="font-label-caps text-label-caps text-primary mb-sm block">STAY INFORMED</span>
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-white mb-md uppercase tracking-tight">Get Climate Data Updates</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg">Monthly briefings on the latest climate data, new visualizations, and analytical insights delivered to your inbox.</p>
+<div class="flex flex-col sm:flex-row gap-sm justify-center">
+<input class="bg-surface-container-low border border-outline-variant px-md py-md text-on-surface font-body-md w-full sm:w-80 focus:border-primary focus:outline-none transition-colors" placeholder="your@email.com" type="email"/>
+<button class="bg-primary text-on-primary font-label-caps px-lg py-md hover:bg-white transition-colors duration-300 whitespace-nowrap">SUBSCRIBE</button>
+</div>
+<p class="font-label-caps text-[10px] text-on-surface-variant/50 mt-sm">No spam. Unsubscribe anytime. We respect your privacy.</p>
+</div>
+</div>
+</section>
 </main>
-<!-- Footer -->
+
+<!-- ===== FOOTER ===== -->
 <footer class="bg-surface-container-lowest border-t border-surface-variant">
 <div class="flex flex-col md:flex-row justify-between items-center py-lg px-grid-margin w-full max-w-7xl mx-auto">
 <div class="mb-md md:mb-0">
 <div class="font-headline-md text-headline-md font-bold text-primary mb-xs">ClimateData</div>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
-                    © 2024 ClimateData Intelligence. Analytical rigor for a changing world.
-                </p>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">© 2024 ClimateData Intelligence. Analytical rigor for a changing world. Data sourced from NASA GISTEMP, NOAA, and Mauna Loa Observatory.</p>
 </div>
 <div class="flex flex-wrap gap-md">
 <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Privacy Policy</a>
@@ -240,42 +371,26 @@
 </div>
 </div>
 </footer>
+
 <script>
-        function animateCounter(id, target, duration) {
-            const element = document.getElementById(id);
-            const startValue = 0;
-            const startTime = performance.now();
-
-            function update(currentTime) {
-                const elapsed = currentTime - startTime;
-                const progress = Math.min(elapsed / duration, 1);
-                const easeValue = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
-                const currentValue = (easeValue * target).toFixed(1);
-                element.innerText = currentValue;
-                if (progress < 1) requestAnimationFrame(update);
-            }
-            requestAnimationFrame(update);
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const counterElement = document.getElementById('temp-counter');
-            const targetValue = parseFloat(counterElement.getAttribute('data-target'));
-            setTimeout(() => { animateCounter('temp-counter', targetValue, 2500); }, 500);
-        });
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100');
-                    entry.target.classList.remove('opacity-0', 'translate-y-4');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.metric-card-border').forEach(card => {
-            card.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-4');
-            observer.observe(card);
-        });
-    </script>
+function animateCounter(id, target, duration) {
+    const el = document.getElementById(id);
+    const st = performance.now();
+    function up(ct) {
+        const p = Math.min((ct-st)/duration, 1);
+        el.innerText = ((1-Math.pow(2,-10*p))*target).toFixed(1);
+        if (p<1) requestAnimationFrame(up);
+    }
+    requestAnimationFrame(up);
+}
+document.addEventListener('DOMContentLoaded', () => {
+    const ce = document.getElementById('temp-counter');
+    setTimeout(() => animateCounter('temp-counter', parseFloat(ce.getAttribute('data-target')), 2500), 500);
+    const obs = new IntersectionObserver((es) => {
+        es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('opacity-100'); e.target.classList.remove('opacity-0','translate-y-4'); } });
+    }, {threshold:0.1});
+    document.querySelectorAll('.metric-card-border').forEach(c => { c.classList.add('transition-all','duration-700','opacity-0','translate-y-4'); obs.observe(c); });
+});
+</script>
 </body>
 </html>

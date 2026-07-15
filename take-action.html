@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ClimateData | Take Action — Climate Solutions &amp; Policy Tracker</title>
+<meta name="description" content="Climate action intelligence. Track global emissions pledges, renewable energy adoption, policy progress, and learn what individuals can do."/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Hanken+Grotesk:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#4b3f00", "tertiary": "#dcc66e", "surface-container": "#191f2f",
+                    "on-primary-fixed-variant": "#6e3900", "on-tertiary": "#3a3000", "on-surface": "#dce2f7",
+                    "surface-tint": "#ffb77d", "surface-container-lowest": "#070e1d", "on-primary": "#4d2600",
+                    "on-primary-fixed": "#2f1500", "inverse-on-surface": "#293040", "error": "#ffb4ab",
+                    "secondary-fixed": "#ffdad6", "primary-fixed": "#ffdcc3", "secondary-container": "#a0010d",
+                    "on-secondary-container": "#ffa99f", "surface-dim": "#0c1322", "surface-variant": "#2e3545",
+                    "on-tertiary-fixed": "#221b00", "on-secondary": "#690005", "background": "#0c1322",
+                    "surface-container-low": "#141b2b", "error-container": "#93000a", "outline-variant": "#554336",
+                    "inverse-surface": "#dce2f7", "on-error-container": "#ffdad6", "on-secondary-fixed": "#410002",
+                    "tertiary-container": "#bfab56", "tertiary-fixed": "#f9e287", "on-surface-variant": "#dbc2b0",
+                    "primary-container": "#d97707", "on-primary-container": "#432100", "on-error": "#690005",
+                    "primary": "#ffb77d", "on-tertiary-fixed-variant": "#534600", "primary-fixed-dim": "#ffb77d",
+                    "tertiary-fixed-dim": "#dcc66e", "on-secondary-fixed-variant": "#93000b", "surface-bright": "#323949",
+                    "surface-container-highest": "#2e3545", "outline": "#a38c7c", "on-background": "#dce2f7",
+                    "inverse-primary": "#904d00", "surface": "#0c1322", "secondary": "#ffb4ab",
+                    "surface-container-high": "#232a3a", "secondary-fixed-dim": "#ffb4ab"
+            },
+            "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+            "spacing": { "md": "24px", "grid-margin": "24px", "sm": "16px", "lg": "48px", "base": "4px", "xl": "80px", "xs": "8px", "grid-gutter": "20px" },
+            "fontFamily": {
+                    "body-md": ["Hanken Grotesk"], "data-metric": ["Space Grotesk"], "headline-lg": ["Space Grotesk"],
+                    "headline-lg-mobile": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "display-xl": ["Space Grotesk"],
+                    "body-lg": ["Hanken Grotesk"], "label-caps": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "data-metric": ["24px", {"lineHeight": "1", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "display-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .gradient-mesh {
+            background: radial-gradient(at 0% 0%, #432100 0%, transparent 50%),
+                        radial-gradient(at 100% 0%, #93000a 0%, transparent 50%),
+                        radial-gradient(at 100% 100%, #d97707 0%, transparent 50%),
+                        radial-gradient(at 0% 100%, #690005 0%, transparent 50%);
+            background-color: #0c1322;
+        }
+        .metric-card-border { border: 1px solid #374151; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .section-hairline { border-top: 1px solid rgba(85,67,54,0.3); }
+</style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<nav class="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-surface-variant flex justify-between items-center px-grid-margin w-full h-20 max-w-7xl mx-auto">
+<a href="index.html" class="font-headline-md text-headline-md font-bold text-primary hover:text-white transition-colors">ClimateData</a>
+<div class="hidden md:flex items-center gap-lg">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="index.html">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="global-temps.html">Global Temps</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="carbon-levels.html">Carbon Levels</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="sea-rise.html">Sea Rise</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md" href="take-action.html">Take Action</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-md py-xs rounded-DEFAULT font-bold active:scale-95 duration-100 hover:bg-surface-container-high transition-all">Sign Up</button>
+</nav>
+
+<main>
+<section class="relative w-full min-h-[400px] flex flex-col justify-center items-center overflow-hidden pt-20">
+<div class="absolute inset-0 z-0 gradient-mesh opacity-60"></div>
+<div class="relative z-10 max-w-7xl mx-auto px-grid-margin py-xl w-full text-center">
+<div class="inline-flex items-center gap-xs px-sm py-1 bg-secondary-container text-on-secondary-container border border-on-secondary-fixed-variant rounded-DEFAULT mb-md">
+<span class="material-symbols-outlined text-[14px]">eco</span><span class="font-label-caps text-label-caps">CLIMATE SOLUTIONS INTELLIGENCE</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white leading-tight uppercase tracking-tight">Take <span class="text-primary">Action</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto mt-md">The data is clear: urgent action is needed. But solutions exist — from policy levers to technological innovation to individual choices. Here's what's working and where progress is being made.</p>
+</div>
+</section>
+
+<!-- GLOBAL PROGRESS TRACKER -->
+<section class="bg-surface-container-lowest py-xl border-y border-surface-variant">
+<div class="max-w-7xl mx-auto px-grid-margin">
+<span class="font-label-caps text-label-caps text-primary mb-sm block">GLOBAL PROGRESS</span>
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-white mb-lg uppercase tracking-tight">Where We Stand</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-grid-gutter">
+<div class="p-md bg-surface-container-low metric-card-border">
+<span class="font-display-xl text-5xl text-primary block mb-sm">+1.2°C</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant block mb-sm">CURRENT WARMING</span>
+<div class="w-full h-1.5 bg-surface-variant mt-sm"><div class="h-full bg-primary w-[80%]"></div></div>
+<p class="text-[11px] text-on-surface-variant mt-sm">Tracking toward 1.5°C limit. At current rates, we reach it by ~2033.</p>
+</div>
+<div class="p-md bg-surface-container-low metric-card-border">
+<span class="font-display-xl text-5xl text-secondary block mb-sm">37 Gt</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant block mb-sm">ANNUAL CO₂ EMISSIONS</span>
+<div class="w-full h-1.5 bg-surface-variant mt-sm"><div class="h-full bg-secondary w-[75%]"></div></div>
+<p class="text-[11px] text-on-surface-variant mt-sm">Global emissions have plateaued but aren't yet declining. Peak expected by 2025–2027.</p>
+</div>
+<div class="p-md bg-surface-container-low metric-card-border">
+<span class="font-display-xl text-5xl text-tertiary block mb-sm">30%</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant block mb-sm">RENEWABLE ELECTRICITY</span>
+<div class="w-full h-1.5 bg-surface-variant mt-sm"><div class="h-full bg-tertiary w-[30%]"></div></div>
+<p class="text-[11px] text-on-surface-variant mt-sm">Share of global electricity from renewables. Solar and wind are the fastest-growing energy sources in history.</p>
+</div>
+<div class="p-md bg-surface-container-low metric-card-border">
+<span class="font-display-xl text-5xl text-green-400 block mb-sm">$1.8T</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant block mb-sm">CLEAN ENERGY INVESTMENT (2023)</span>
+<div class="w-full h-1.5 bg-surface-variant mt-sm"><div class="h-full bg-green-400 w-[45%]"></div></div>
+<p class="text-[11px] text-on-surface-variant mt-sm">Global clean energy investment surpassed fossil fuel investment for the first time in 2023.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SOLUTIONS GRID -->
+<section class="bg-background py-xl section-hairline">
+<div class="max-w-7xl mx-auto px-grid-margin">
+<span class="font-label-caps text-label-caps text-primary mb-sm block">WHAT WORKS</span>
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-white mb-lg uppercase tracking-tight">Proven Climate Solutions</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-grid-gutter">
+<div class="p-lg bg-surface-container-low metric-card-border flex gap-md">
+<span class="material-symbols-outlined text-primary text-3xl shrink-0">solar_power</span>
+<div><h4 class="font-headline-md text-lg font-bold text-white mb-xs">Renewable Energy Deployment</h4><p class="font-body-md text-sm text-on-surface-variant">Solar PV costs have fallen 89% since 2010. Wind costs down 70%. Renewables are now the cheapest source of new electricity in most of the world. Tripling renewable capacity by 2030 is the single most impactful climate action.</p></div>
+</div>
+<div class="p-lg bg-surface-container-low metric-card-border flex gap-md">
+<span class="material-symbols-outlined text-secondary text-3xl shrink-0">electric_car</span>
+<div><h4 class="font-headline-md text-lg font-bold text-white mb-xs">Transport Electrification</h4><p class="font-body-md text-sm text-on-surface-variant">EV sales reached 18% of global car sales in 2023, up from 2% in 2018. Battery costs have fallen 97% since 1991. Norway leads at 93% EV market share. Full transition by 2035 in major markets.</p></div>
+</div>
+<div class="p-lg bg-surface-container-low metric-card-border flex gap-md">
+<span class="material-symbols-outlined text-tertiary text-3xl shrink-0">forest</span>
+<div><h4 class="font-headline-md text-lg font-bold text-white mb-xs">Natural Climate Solutions</h4><p class="font-body-md text-sm text-on-surface-variant">Reforestation, peatland restoration, and improved agricultural practices can provide ~30% of needed emissions reductions by 2030 while delivering co-benefits for biodiversity, water, and food security.</p></div>
+</div>
+<div class="p-lg bg-surface-container-low metric-card-border flex gap-md">
+<span class="material-symbols-outlined text-blue-300 text-3xl shrink-0">engineering</span>
+<div><h4 class="font-headline-md text-lg font-bold text-white mb-xs">Energy Efficiency</h4><p class="font-body-md text-sm text-on-surface-variant">Buildings account for 40% of global emissions. Heat pumps, LED lighting, smart grids, and building retrofits offer some of the most cost-effective emissions reductions — often with net-negative costs over their lifetime.</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- POLICY TRACKER -->
+<section class="bg-surface-container-lowest py-xl section-hairline">
+<div class="max-w-7xl mx-auto px-grid-margin">
+<span class="font-label-caps text-label-caps text-primary mb-sm block">POLICY LANDSCAPE</span>
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-white mb-lg uppercase tracking-tight">Key Climate Policies &amp; Agreements</h2>
+<div class="space-y-md">
+<div class="flex gap-md p-lg bg-surface-container-low metric-card-border items-start">
+<div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center shrink-0"><span class="font-headline-md text-primary font-bold">1</span></div>
+<div><h4 class="font-headline-md text-lg font-bold text-white mb-xs">Paris Agreement (2015) — 195 Signatories</h4><p class="font-body-md text-sm text-on-surface-variant">Legally binding international treaty to limit warming to well below 2°C, preferably 1.5°C. Countries submit Nationally Determined Contributions (NDCs) every 5 years. Current NDCs put the world on track for ~2.5°C — insufficient but improving.</p></div>
+</div>
+<div class="flex gap-md p-lg bg-surface-container-low metric-card-border items-start">
+<div class="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center shrink-0"><span class="font-headline-md text-secondary font-bold">2</span></div>
+<div><h4 class="font-headline-md text-lg font-bold text-white mb-xs">EU Green Deal (2019) — Carbon Neutral by 2050</h4><p class="font-body-md text-sm text-on-surface-variant">The European Union's comprehensive growth strategy targeting net-zero emissions by 2050. Includes Fit for 55 package, carbon border adjustment mechanism (CBAM), and the world's largest emissions trading system (EU ETS).</p></div>
+</div>
+<div class="flex gap-md p-lg bg-surface-container-low metric-card-border items-start">
+<div class="w-12 h-12 rounded-full bg-tertiary/20 flex items-center justify-center shrink-0"><span class="font-headline-md text-tertiary font-bold">3</span></div>
+<div><h4 class="font-headline-md text-lg font-bold text-white mb-xs">US Inflation Reduction Act (2022) — $369B Climate Investment</h4><p class="font-body-md text-sm text-on-surface-variant">The largest climate investment in US history. Tax credits for renewable energy, EV manufacturing, hydrogen, carbon capture, and building efficiency. Projected to reduce US emissions 40% below 2005 levels by 2030.</p></div>
+</div>
+<div class="flex gap-md p-lg bg-surface-container-low metric-card-border items-start">
+<div class="w-12 h-12 rounded-full bg-green-400/20 flex items-center justify-center shrink-0"><span class="font-headline-md text-green-400 font-bold">4</span></div>
+<div><h4 class="font-headline-md text-lg font-bold text-white mb-xs">Global Methane Pledge (2021) — 155 Countries</h4><p class="font-body-md text-sm text-on-surface-variant">Commitment to reduce global methane emissions 30% below 2020 levels by 2030. Methane is 80× more potent than CO₂ over 20 years. Tackling methane is the fastest way to slow near-term warming.</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- INDIVIDUAL ACTION -->
+<section class="bg-background py-xl section-hairline">
+<div class="max-w-7xl mx-auto px-grid-margin">
+<span class="font-label-caps text-label-caps text-primary mb-sm block">PERSONAL IMPACT</span>
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-white mb-lg uppercase tracking-tight">What You Can Do</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mb-lg">Individual actions matter — but systemic change is multiplicative. The most impactful actions combine personal choices with advocacy for policy change, corporate accountability, and community organizing.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-grid-gutter">
+<div class="p-lg bg-surface-container-low metric-card-border text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-md block">campaign</span>
+<h4 class="font-headline-md text-lg font-bold text-white mb-sm">Vote &amp; Advocate</h4>
+<p class="font-body-md text-sm text-on-surface-variant">The single most impactful action: support candidates and policies that prioritize climate action. Write to representatives. Join climate organizations. Systemic change multiplies individual effort exponentially.</p>
+</div>
+<div class="p-lg bg-surface-container-low metric-card-border text-center">
+<span class="material-symbols-outlined text-secondary text-4xl mb-md block">directions_bike</span>
+<h4 class="font-headline-md text-lg font-bold text-white mb-sm">Transform Transport</h4>
+<p class="font-body-md text-sm text-on-surface-variant">Transport is the largest source of household emissions. Switch to an EV, use public transit, bike, walk, or reduce air travel. One fewer transatlantic flight saves ~1.6 tonnes CO₂.</p>
+</div>
+<div class="p-lg bg-surface-container-low metric-card-border text-center">
+<span class="material-symbols-outlined text-tertiary text-4xl mb-md block">energy_savings_leaf</span>
+<h4 class="font-headline-md text-lg font-bold text-white mb-sm">Electrify Everything</h4>
+<p class="font-body-md text-sm text-on-surface-variant">Replace gas furnaces with heat pumps. Install solar panels. Switch to a renewable electricity provider. Induction cooktops instead of gas stoves. Electrification is the pathway to zero-emission homes.</p>
+</div>
+<div class="p-lg bg-surface-container-low metric-card-border text-center">
+<span class="material-symbols-outlined text-green-300 text-4xl mb-md block">restaurant</span>
+<h4 class="font-headline-md text-lg font-bold text-white mb-sm">Shift Your Diet</h4>
+<p class="font-body-md text-sm text-on-surface-variant">Plant-based diets have 75% lower emissions than high-meat diets. Reducing food waste (which accounts for 8–10% of global emissions) is one of the most accessible climate actions anyone can take.</p>
+</div>
+<div class="p-lg bg-surface-container-low metric-card-border text-center">
+<span class="material-symbols-outlined text-blue-300 text-4xl mb-md block">groups</span>
+<h4 class="font-headline-md text-lg font-bold text-white mb-sm">Build Community</h4>
+<p class="font-body-md text-sm text-on-surface-variant">Join a local climate group. Start conversations. Share data and solutions. Community solar projects, local food cooperatives, and neighborhood resilience planning amplify impact beyond individual efforts.</p>
+</div>
+<div class="p-lg bg-surface-container-low metric-card-border text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-md block">paid</span>
+<h4 class="font-headline-md text-lg font-bold text-white mb-sm">Align Your Investments</h4>
+<p class="font-body-md text-sm text-on-surface-variant">Move savings and pensions out of fossil fuels. ESG and climate-aware funds have grown to $30+ trillion. Divestment campaigns have shifted over $40 trillion in assets away from fossil fuels since 2012.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- STAY INFORMED -->
+<section class="bg-surface-container-lowest py-xl section-hairline">
+<div class="max-w-7xl mx-auto px-grid-margin text-center">
+<div class="max-w-2xl mx-auto">
+<span class="font-label-caps text-label-caps text-primary mb-sm block">STAY ENGAGED</span>
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-white mb-md uppercase tracking-tight">The Data Drives Action</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg">Understanding the numbers is the first step. Stay informed with monthly climate data briefings, policy updates, and solution spotlights.</p>
+<div class="flex flex-col sm:flex-row gap-sm justify-center">
+<input class="bg-surface-container-low border border-outline-variant px-md py-md text-on-surface font-body-md w-full sm:w-80 focus:border-primary focus:outline-none transition-colors" placeholder="your@email.com" type="email"/>
+<button class="bg-primary text-on-primary font-label-caps px-lg py-md hover:bg-white transition-colors duration-300 whitespace-nowrap">SUBSCRIBE</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="bg-surface-container-lowest border-t border-surface-variant">
+<div class="flex flex-col md:flex-row justify-between items-center py-lg px-grid-margin w-full max-w-7xl mx-auto">
+<div class="mb-md md:mb-0"><div class="font-headline-md text-headline-md font-bold text-primary mb-xs">ClimateData</div><p class="font-body-md text-body-md text-on-surface-variant max-w-xs">© 2024 ClimateData Intelligence. Analytical rigor for a changing world. Data sourced from IEA, IPCC, IRENA, and national policy databases.</p></div>
+<div class="flex flex-wrap gap-md"><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Privacy Policy</a><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Methodology</a><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Data Sources</a><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Contact</a></div>
+</div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const obs = new IntersectionObserver((es) => {es.forEach(e => {if(e.isIntersecting){e.target.classList.add('opacity-100');e.target.classList.remove('opacity-0','translate-y-4');}});},{threshold:0.1});
+    document.querySelectorAll('.metric-card-border').forEach(c=>{c.classList.add('transition-all','duration-700','opacity-0','translate-y-4');obs.observe(c);});
+});
+</script>
+</body>
+</html>

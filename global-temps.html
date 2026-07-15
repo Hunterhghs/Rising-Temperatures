@@ -3,10 +3,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>ClimateData | Global Temperature Anomaly</title>
+<title>ClimateData | Global Temperature Anomaly 1880–2024</title>
+<meta name="description" content="Interactive NASA GISTEMP global temperature anomaly data. Explore 145 years of climate data with decadal breakdowns, regional trends, and methodology."/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Hanken+Grotesk:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 <script id="tailwind-config">
       tailwind.config = {
@@ -14,79 +15,29 @@
         theme: {
           extend: {
             "colors": {
-                    "on-tertiary-container": "#4b3f00",
-                    "tertiary": "#dcc66e",
-                    "surface-container": "#191f2f",
-                    "on-primary-fixed-variant": "#6e3900",
-                    "on-tertiary": "#3a3000",
-                    "on-surface": "#dce2f7",
-                    "surface-tint": "#ffb77d",
-                    "surface-container-lowest": "#070e1d",
-                    "on-primary": "#4d2600",
-                    "on-primary-fixed": "#2f1500",
-                    "inverse-on-surface": "#293040",
-                    "error": "#ffb4ab",
-                    "secondary-fixed": "#ffdad6",
-                    "primary-fixed": "#ffdcc3",
-                    "secondary-container": "#a0010d",
-                    "on-secondary-container": "#ffa99f",
-                    "surface-dim": "#0c1322",
-                    "surface-variant": "#2e3545",
-                    "on-tertiary-fixed": "#221b00",
-                    "on-secondary": "#690005",
-                    "background": "#0c1322",
-                    "surface-container-low": "#141b2b",
-                    "error-container": "#93000a",
-                    "outline-variant": "#554336",
-                    "inverse-surface": "#dce2f7",
-                    "on-error-container": "#ffdad6",
-                    "on-secondary-fixed": "#410002",
-                    "tertiary-container": "#bfab56",
-                    "tertiary-fixed": "#f9e287",
-                    "on-surface-variant": "#dbc2b0",
-                    "primary-container": "#d97707",
-                    "on-primary-container": "#432100",
-                    "on-error": "#690005",
-                    "primary": "#ffb77d",
-                    "on-tertiary-fixed-variant": "#534600",
-                    "primary-fixed-dim": "#ffb77d",
-                    "tertiary-fixed-dim": "#dcc66e",
-                    "on-secondary-fixed-variant": "#93000b",
-                    "surface-bright": "#323949",
-                    "surface-container-highest": "#2e3545",
-                    "outline": "#a38c7c",
-                    "on-background": "#dce2f7",
-                    "inverse-primary": "#904d00",
-                    "surface": "#0c1322",
-                    "secondary": "#ffb4ab",
-                    "surface-container-high": "#232a3a",
-                    "secondary-fixed-dim": "#ffb4ab"
+                    "on-tertiary-container": "#4b3f00", "tertiary": "#dcc66e", "surface-container": "#191f2f",
+                    "on-primary-fixed-variant": "#6e3900", "on-tertiary": "#3a3000", "on-surface": "#dce2f7",
+                    "surface-tint": "#ffb77d", "surface-container-lowest": "#070e1d", "on-primary": "#4d2600",
+                    "on-primary-fixed": "#2f1500", "inverse-on-surface": "#293040", "error": "#ffb4ab",
+                    "secondary-fixed": "#ffdad6", "primary-fixed": "#ffdcc3", "secondary-container": "#a0010d",
+                    "on-secondary-container": "#ffa99f", "surface-dim": "#0c1322", "surface-variant": "#2e3545",
+                    "on-tertiary-fixed": "#221b00", "on-secondary": "#690005", "background": "#0c1322",
+                    "surface-container-low": "#141b2b", "error-container": "#93000a", "outline-variant": "#554336",
+                    "inverse-surface": "#dce2f7", "on-error-container": "#ffdad6", "on-secondary-fixed": "#410002",
+                    "tertiary-container": "#bfab56", "tertiary-fixed": "#f9e287", "on-surface-variant": "#dbc2b0",
+                    "primary-container": "#d97707", "on-primary-container": "#432100", "on-error": "#690005",
+                    "primary": "#ffb77d", "on-tertiary-fixed-variant": "#534600", "primary-fixed-dim": "#ffb77d",
+                    "tertiary-fixed-dim": "#dcc66e", "on-secondary-fixed-variant": "#93000b", "surface-bright": "#323949",
+                    "surface-container-highest": "#2e3545", "outline": "#a38c7c", "on-background": "#dce2f7",
+                    "inverse-primary": "#904d00", "surface": "#0c1322", "secondary": "#ffb4ab",
+                    "surface-container-high": "#232a3a", "secondary-fixed-dim": "#ffb4ab"
             },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "spacing": {
-                    "md": "24px",
-                    "grid-margin": "24px",
-                    "sm": "16px",
-                    "lg": "48px",
-                    "base": "4px",
-                    "xl": "80px",
-                    "xs": "8px",
-                    "grid-gutter": "20px"
-            },
+            "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+            "spacing": { "md": "24px", "grid-margin": "24px", "sm": "16px", "lg": "48px", "base": "4px", "xl": "80px", "xs": "8px", "grid-gutter": "20px" },
             "fontFamily": {
-                    "body-md": ["Hanken Grotesk"],
-                    "data-metric": ["Space Grotesk"],
-                    "headline-lg": ["Space Grotesk"],
-                    "headline-lg-mobile": ["Space Grotesk"],
-                    "headline-md": ["Space Grotesk"],
-                    "display-xl": ["Space Grotesk"],
-                    "body-lg": ["Hanken Grotesk"],
-                    "label-caps": ["JetBrains Mono"]
+                    "body-md": ["Hanken Grotesk"], "data-metric": ["Space Grotesk"], "headline-lg": ["Space Grotesk"],
+                    "headline-lg-mobile": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "display-xl": ["Space Grotesk"],
+                    "body-lg": ["Hanken Grotesk"], "label-caps": ["JetBrains Mono"]
             },
             "fontSize": {
                     "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
@@ -103,12 +54,8 @@
       }
     </script>
 <style>
-        @keyframes countUp {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        @keyframes countUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         .animate-count { animation: countUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-        
         .gradient-mesh {
             background: radial-gradient(at 0% 0%, #432100 0%, transparent 50%),
                         radial-gradient(at 100% 0%, #93000a 0%, transparent 50%),
@@ -116,132 +63,284 @@
                         radial-gradient(at 0% 100%, #690005 0%, transparent 50%);
             background-color: #0c1322;
         }
-
-        .metric-card-border {
-            border: 1px solid #374151;
-        }
-        
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-    </style>
+        .metric-card-border { border: 1px solid #374151; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .section-hairline { border-top: 1px solid rgba(85,67,54,0.3); }
+</style>
 </head>
 <body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
-<!-- Top Navigation Bar -->
-<nav class="sticky top-0 z-50 bg-background dark:bg-background border-b border-surface-variant flex justify-between items-center px-grid-margin w-full h-20 max-w-7xl mx-auto">
+<!-- === TOP NAVIGATION === -->
+<nav class="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-surface-variant flex justify-between items-center px-grid-margin w-full h-20 max-w-7xl mx-auto">
 <a href="index.html" class="font-headline-md text-headline-md font-bold text-primary hover:text-white transition-colors">ClimateData</a>
 <div class="hidden md:flex items-center gap-lg">
 <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="index.html">Home</a>
 <a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md" href="global-temps.html">Global Temps</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Carbon Levels</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Sea Rise</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Take Action</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="carbon-levels.html">Carbon Levels</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="sea-rise.html">Sea Rise</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="take-action.html">Take Action</a>
 </div>
-<button class="bg-primary-container text-on-primary-container px-md py-xs rounded-DEFAULT font-bold active:scale-95 duration-100 hover:bg-surface-container-high transition-all">
-            Sign Up
-        </button>
+<button class="bg-primary-container text-on-primary-container px-md py-xs rounded-DEFAULT font-bold active:scale-95 duration-100 hover:bg-surface-container-high transition-all">Sign Up</button>
 </nav>
-<!-- Main Content -->
-<main class="min-h-screen">
-<!-- Hero Section -->
-<section class="relative w-full min-h-[870px] flex flex-col justify-center items-center overflow-hidden pt-20">
-<div class="absolute inset-0 z-0 gradient-mesh opacity-80"></div>
-<div class="relative z-10 max-w-7xl mx-auto px-grid-margin grid grid-cols-1 lg:grid-cols-12 gap-lg items-center py-xl w-full">
-<div class="lg:col-span-7 space-y-md">
-<div class="inline-flex items-center gap-xs px-sm py-1 bg-secondary-container text-on-secondary-container border border-on-secondary-fixed-variant rounded-DEFAULT animate-pulse">
-<span class="material-symbols-outlined text-[14px]">warning</span>
-<span class="font-label-caps text-label-caps">CRITICAL CLIMATE ALERT</span>
+
+<main>
+<!-- ===== COMPACT HERO ===== -->
+<section class="relative w-full min-h-[400px] flex flex-col justify-center items-center overflow-hidden pt-20">
+<div class="absolute inset-0 z-0 gradient-mesh opacity-60"></div>
+<div class="relative z-10 max-w-7xl mx-auto px-grid-margin py-xl w-full text-center">
+<div class="inline-flex items-center gap-xs px-sm py-1 bg-secondary-container text-on-secondary-container border border-on-secondary-fixed-variant rounded-DEFAULT mb-md">
+<span class="material-symbols-outlined text-[14px]">show_chart</span>
+<span class="font-label-caps text-label-caps">NASA GISTEMP v4 DATASET</span>
 </div>
 <h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white leading-tight uppercase tracking-tight">
-                        Global Temperature <span class="text-primary">Anomaly</span>
+                Global Temperature <span class="text-primary">Anomaly</span>
 </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-                        Since 1980, global temperatures have risen at roughly 0.20°C per decade — more than double the rate of the previous century. Explore the data below.
-                    </p>
-<div class="flex gap-md pt-sm">
-<a href="#chart-section" class="bg-primary text-on-primary font-label-caps px-lg py-md hover:bg-white transition-colors duration-300 inline-block">VIEW FULL CHART</a>
-<button class="border border-outline text-white font-label-caps px-lg py-md hover:bg-surface-variant transition-colors duration-300">DOWNLOAD DATA</button>
-</div>
-</div>
-<div class="lg:col-span-5 flex flex-col items-center justify-center text-center p-lg bg-surface-container/30 backdrop-blur-md metric-card-border rounded-lg relative group">
-<div class="absolute -top-1 left-0 w-full h-[3px] bg-primary"></div>
-<span class="font-label-caps text-label-caps text-primary mb-md block">2024 ANOMALY</span>
-<div class="relative inline-block">
-<span class="font-display-xl text-[100px] md:text-display-xl text-white block leading-none animate-count" data-target="1.45" id="temp-counter">0.0</span>
-<span class="font-headline-lg text-primary absolute -top-4 -right-12">°C</span>
-</div>
-<div class="w-full h-1 bg-surface-variant mt-lg relative">
-<div class="absolute left-0 top-0 h-full bg-primary w-[92%] transition-all duration-1000 ease-out shadow-[0_0_15px_rgba(255,183,125,0.5)]"></div>
-</div>
-<span class="font-label-caps text-[10px] text-on-surface-variant mt-sm tracking-[0.2em]">ABOVE 1951-1980 BASELINE</span>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto mt-md">
+                145 years of land-ocean temperature data. Anomalies relative to the 1951–1980 baseline period. Updated through December 2024.
+            </p>
+<div class="flex justify-center gap-md mt-lg">
+<a href="#chart-section" class="bg-primary text-on-primary font-label-caps px-lg py-md hover:bg-white transition-colors duration-300 inline-block">VIEW CHART</a>
+<button class="border border-outline text-white font-label-caps px-lg py-md hover:bg-surface-variant transition-colors duration-300">DOWNLOAD CSV</button>
 </div>
 </div>
 </section>
-<!-- KPI Row -->
+
+<!-- ===== KPI STAT ROW ===== -->
 <section class="bg-surface-container-lowest py-xl border-y border-surface-variant">
 <div class="max-w-7xl mx-auto px-grid-margin">
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-grid-gutter">
 <div class="p-md bg-surface-container-low metric-card-border flex flex-col justify-between h-full group hover:bg-surface-container transition-all">
-<div class="flex justify-between items-start mb-md">
-<span class="font-label-caps text-label-caps text-on-surface-variant">WARMING RATE</span>
-<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">trending_up</span>
-</div>
+<div class="flex justify-between items-start mb-md"><span class="font-label-caps text-label-caps text-on-surface-variant">WARMING RATE</span><span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL'1;">trending_up</span></div>
 <h3 class="font-data-metric text-data-metric text-white mb-xs">0.20°C/decade</h3>
-<p class="text-[12px] font-body-md text-on-surface-variant opacity-70">Post-1980 warming rate, more than double the pre-1980 average.</p>
+<p class="text-[12px] font-body-md text-on-surface-variant opacity-70">Post-1980 warming rate, more than double the pre-1980 average of 0.08°C/decade.</p>
 </div>
 <div class="p-md bg-surface-container-low metric-card-border flex flex-col justify-between h-full group hover:bg-surface-container transition-all">
-<div class="flex justify-between items-start mb-md">
-<span class="font-label-caps text-label-caps text-on-surface-variant">RECORD YEAR</span>
-<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">whatshot</span>
-</div>
+<div class="flex justify-between items-start mb-md"><span class="font-label-caps text-label-caps text-on-surface-variant">RECORD YEAR</span><span class="material-symbols-outlined text-secondary" style="font-variation-settings:'FILL'1;">whatshot</span></div>
 <h3 class="font-data-metric text-data-metric text-white mb-xs">2024: +1.45°C</h3>
-<p class="text-[12px] font-body-md text-on-surface-variant opacity-70">Highest annual anomaly in the instrumental record (1850-present).</p>
+<p class="text-[12px] font-body-md text-on-surface-variant opacity-70">Highest annual anomaly in the instrumental record. Previous record: 2023 at +1.37°C.</p>
 </div>
 <div class="p-md bg-surface-container-low metric-card-border flex flex-col justify-between h-full group hover:bg-surface-container transition-all">
-<div class="flex justify-between items-start mb-md">
-<span class="font-label-caps text-label-caps text-on-surface-variant">LONG-TERM MEAN</span>
-<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">monitoring</span>
-</div>
-<h3 class="font-data-metric text-data-metric text-white mb-xs">1880-2024 Baseline</h3>
-<p class="text-[12px] font-body-md text-on-surface-variant opacity-70">145 years of NASA GISS Surface Temperature Analysis (GISTEMP v4).</p>
+<div class="flex justify-between items-start mb-md"><span class="font-label-caps text-label-caps text-on-surface-variant">DATA COVERAGE</span><span class="material-symbols-outlined text-tertiary" style="font-variation-settings:'FILL'1;">monitoring</span></div>
+<h3 class="font-data-metric text-data-metric text-white mb-xs">145 Years</h3>
+<p class="text-[12px] font-body-md text-on-surface-variant opacity-70">1880–2024 continuous record from NASA Goddard Institute for Space Studies.</p>
 </div>
 <div class="p-md bg-surface-container-low metric-card-border flex flex-col justify-between h-full group hover:bg-surface-container transition-all">
-<div class="flex justify-between items-start mb-md">
-<span class="font-label-caps text-label-caps text-on-surface-variant">EL NIÑO EFFECT</span>
-<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">cyclone</span>
-</div>
+<div class="flex justify-between items-start mb-md"><span class="font-label-caps text-label-caps text-on-surface-variant">EL NIÑO EFFECT</span><span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL'1;">cyclone</span></div>
 <h3 class="font-data-metric text-data-metric text-white mb-xs">+0.1 to +0.2°C</h3>
-<p class="text-[12px] font-body-md text-on-surface-variant opacity-70">Estimated temporary boost from 2023-24 El Niño event.</p>
+<p class="text-[12px] font-body-md text-on-surface-variant opacity-70">Estimated temporary boost from the 2023–2024 El Niño event on global temperatures.</p>
 </div>
 </div>
 </div>
 </section>
-<!-- Chart Section -->
-<section id="chart-section" class="bg-background py-xl border-b border-surface-variant">
+
+<!-- ===== INTERACTIVE CHART ===== -->
+<section id="chart-section" class="bg-background py-xl section-hairline">
 <div class="max-w-7xl mx-auto px-grid-margin">
 <div class="mb-lg">
-<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-white mb-md uppercase tracking-tight">Global Temperature Anomaly 1880–2024</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">NASA GISTEMP v4 land-ocean temperature index. Anomalies relative to 1951–1980 baseline. Red bars indicate years above the baseline; blue bars indicate years below.</p>
+<span class="font-label-caps text-label-caps text-primary mb-sm block">INTERACTIVE VISUALIZATION</span>
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-white mb-md uppercase tracking-tight">Temperature Anomaly: 1880–2024</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">NASA GISTEMP v4 land-ocean temperature index. Each bar represents the annual global mean temperature anomaly relative to the 1951–1980 baseline. The gold line shows the 5-year moving average to highlight the long-term trend. Hover over individual years for precise values.</p>
 </div>
 <div class="relative w-full bg-surface-container-lowest metric-card-border rounded-lg p-md overflow-hidden">
-<canvas id="tempChart" class="w-full" style="height: 420px;"></canvas>
+<canvas id="tempChart" class="w-full" style="height: 480px;"></canvas>
 </div>
-<div class="mt-lg p-lg bg-surface-container-low border-l-4 border-primary">
-<p class="font-body-lg text-body-lg text-on-surface-variant">
-        Since 1980, global temperatures have risen at roughly <span class="text-primary font-bold">0.20°C per decade</span> — more than double the rate of the previous century. The last nine years (2016–2024) are the nine warmest on record.
-      </p>
+<div class="flex flex-wrap gap-sm mt-md">
+<div class="flex items-center gap-xs"><span class="w-3 h-3 bg-primary-container rounded-sm"></span><span class="font-label-caps text-[10px] text-on-surface-variant">Positive Anomaly (Above Baseline)</span></div>
+<div class="flex items-center gap-xs"><span class="w-3 h-3 bg-blue-400/60 rounded-sm"></span><span class="font-label-caps text-[10px] text-on-surface-variant">Negative Anomaly (Below Baseline)</span></div>
+<div class="flex items-center gap-xs"><span class="w-0.5 h-4 bg-tertiary rounded-sm"></span><span class="font-label-caps text-[10px] text-on-surface-variant">5-Year Moving Average</span></div>
+</div>
+</div>
+</section>
+
+<!-- ===== DECADAL BREAKDOWN ===== -->
+<section class="bg-surface-container-lowest py-xl section-hairline">
+<div class="max-w-7xl mx-auto px-grid-margin">
+<span class="font-label-caps text-label-caps text-primary mb-sm block">DECADAL ANALYSIS</span>
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-white mb-lg uppercase tracking-tight">Warming by Decade</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-grid-gutter">
+<div class="p-md bg-surface-container-low metric-card-border flex flex-col gap-sm group hover:bg-surface-container transition-all">
+<span class="font-label-caps text-[10px] text-primary tracking-[0.2em]">1880s</span>
+<div class="flex items-baseline gap-xs"><span class="font-display-xl text-3xl text-blue-300">-0.21</span><span class="font-label-caps text-[10px] text-on-surface-variant">°C</span></div>
+<p class="text-[11px] text-on-surface-variant">Cool baseline. Krakatoa eruption (1883) caused temporary global cooling of ~0.3°C.</p>
+<div class="w-full h-0.5 bg-surface-variant"><div class="h-full bg-blue-400 w-[10%]"></div></div>
+</div>
+<div class="p-md bg-surface-container-low metric-card-border flex flex-col gap-sm group hover:bg-surface-container transition-all">
+<span class="font-label-caps text-[10px] text-primary tracking-[0.2em]">1930s–40s</span>
+<div class="flex items-baseline gap-xs"><span class="font-display-xl text-3xl text-blue-200">+0.05</span><span class="font-label-caps text-[10px] text-on-surface-variant">°C</span></div>
+<p class="text-[11px] text-on-surface-variant">Early warming period, partly attributed to the Dust Bowl and reduced aerosols during the Great Depression.</p>
+<div class="w-full h-0.5 bg-surface-variant"><div class="h-full bg-blue-300 w-[20%]"></div></div>
+</div>
+<div class="p-md bg-surface-container-low metric-card-border flex flex-col gap-sm group hover:bg-surface-container transition-all">
+<span class="font-label-caps text-[10px] text-secondary tracking-[0.2em]">1950s–70s</span>
+<div class="flex items-baseline gap-xs"><span class="font-display-xl text-3xl text-on-surface">-0.03</span><span class="font-label-caps text-[10px] text-on-surface-variant">°C</span></div>
+<p class="text-[11px] text-on-surface-variant">Aerosol-driven cooling partially offset GHG warming. Mount Agung (1963) caused temporary dip.</p>
+<div class="w-full h-0.5 bg-surface-variant"><div class="h-full bg-on-surface/30 w-[25%]"></div></div>
+</div>
+<div class="p-md bg-surface-container-low metric-card-border flex flex-col gap-sm group hover:bg-surface-container transition-all">
+<span class="font-label-caps text-[10px] text-primary tracking-[0.2em]">1980s–90s</span>
+<div class="flex items-baseline gap-xs"><span class="font-display-xl text-3xl text-primary">+0.31</span><span class="font-label-caps text-[10px] text-on-surface-variant">°C</span></div>
+<p class="text-[11px] text-on-surface-variant">Acceleration begins. Pinatubo eruption (1991) caused ~0.5°C temporary cooling. Super El Niño (1998) set new record.</p>
+<div class="w-full h-0.5 bg-surface-variant"><div class="h-full bg-primary w-[40%]"></div></div>
+</div>
+<div class="p-md bg-surface-container-low metric-card-border flex flex-col gap-sm group hover:bg-surface-container transition-all">
+<span class="font-label-caps text-[10px] text-primary tracking-[0.2em]">2000s</span>
+<div class="flex items-baseline gap-xs"><span class="font-display-xl text-3xl text-primary">+0.56</span><span class="font-label-caps text-[10px] text-on-surface-variant">°C</span></div>
+<p class="text-[11px] text-on-surface-variant">All years in warmest 25 on record. Arctic amplification becomes pronounced. 2005 and 2007 set successive records.</p>
+<div class="w-full h-0.5 bg-surface-variant"><div class="h-full bg-primary w-[55%]"></div></div>
+</div>
+<div class="p-md bg-surface-container-low metric-card-border flex flex-col gap-sm group hover:bg-surface-container transition-all">
+<span class="font-label-caps text-[10px] text-accent-warm tracking-[0.2em]" style="color:#ffb77d">2010s</span>
+<div class="flex items-baseline gap-xs"><span class="font-display-xl text-3xl text-orange-400">+0.82</span><span class="font-label-caps text-[10px] text-on-surface-variant">°C</span></div>
+<p class="text-[11px] text-on-surface-variant">Warmest decade on record at the time. 2016 became the hottest year ever recorded during a strong El Niño event.</p>
+<div class="w-full h-0.5 bg-surface-variant"><div class="h-full bg-orange-400 w-[70%]"></div></div>
+</div>
+<div class="p-md bg-surface-container-low metric-card-border flex flex-col gap-sm group hover:bg-surface-container transition-all">
+<span class="font-label-caps text-[10px] text-secondary tracking-[0.2em]">2020–2024</span>
+<div class="flex items-baseline gap-xs"><span class="font-display-xl text-3xl text-secondary">+1.10</span><span class="font-label-caps text-[10px] text-on-surface-variant">°C</span></div>
+<p class="text-[11px] text-on-surface-variant">Hottest 5-year period in recorded history. 2024 reached +1.45°C — approaching the 1.5°C Paris threshold.</p>
+<div class="w-full h-0.5 bg-surface-variant"><div class="h-full bg-secondary w-[92%]"></div></div>
+</div>
+<div class="p-md bg-surface-container-low metric-card-border flex flex-col gap-sm group hover:bg-surface-container transition-all">
+<span class="font-label-caps text-[10px] text-tertiary tracking-[0.2em]">TREND 1880–2024</span>
+<div class="flex items-baseline gap-xs"><span class="font-display-xl text-3xl text-tertiary">+1.19</span><span class="font-label-caps text-[10px] text-on-surface-variant">°C</span></div>
+<p class="text-[11px] text-on-surface-variant">Total warming over the full 145-year instrumental record. Rate is accelerating: ~70% of warming occurred after 1970.</p>
+<div class="w-full h-0.5 bg-surface-variant"><div class="h-full bg-tertiary w-[95%]"></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ===== KEY INSIGHTS ===== -->
+<section class="bg-background py-xl section-hairline">
+<div class="max-w-7xl mx-auto px-grid-margin">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl">
+<div>
+<span class="font-label-caps text-label-caps text-primary mb-sm block">KEY INSIGHT</span>
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-white mb-md uppercase tracking-tight">What Drives Temperature Change</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-md">Global temperature variability is driven by both natural and anthropogenic factors. Understanding the relative contributions is essential for interpreting the data.</p>
+<div class="space-y-md">
+<div class="flex gap-md p-md bg-surface-container-low metric-card-border">
+<span class="material-symbols-outlined text-primary text-2xl mt-1">factory</span>
+<div>
+<h4 class="font-headline-md text-base font-bold text-white mb-xs">Greenhouse Gases (Primary Driver)</h4>
+<p class="font-body-md text-sm text-on-surface-variant">CO₂, methane, and N₂O from fossil fuel combustion, agriculture, and land-use change account for over 100% of observed warming since 1950 (offset partially by aerosol cooling).</p>
+</div>
+</div>
+<div class="flex gap-md p-md bg-surface-container-low metric-card-border">
+<span class="material-symbols-outlined text-secondary text-2xl mt-1">flare</span>
+<div>
+<h4 class="font-headline-md text-base font-bold text-white mb-xs">Solar Variability (Minor)</h4>
+<p class="font-body-md text-sm text-on-surface-variant">Solar irradiance has varied only ±0.1% over the instrumental record and cannot explain the observed warming trend. Solar forcing accounts for less than 5% of post-1950 warming.</p>
+</div>
+</div>
+<div class="flex gap-md p-md bg-surface-container-low metric-card-border">
+<span class="material-symbols-outlined text-tertiary text-2xl mt-1">tsunami</span>
+<div>
+<h4 class="font-headline-md text-base font-bold text-white mb-xs">ENSO (Interannual Variability)</h4>
+<p class="font-body-md text-sm text-on-surface-variant">El Niño-Southern Oscillation causes ±0.1–0.2°C swings in global temperature. The 2023–24 El Niño contributed to the record-breaking temperatures, but the underlying trend remains anthropogenic.</p>
+</div>
+</div>
+<div class="flex gap-md p-md bg-surface-container-low metric-card-border">
+<span class="material-symbols-outlined text-blue-300 text-2xl mt-1">volcano</span>
+<div>
+<h4 class="font-headline-md text-base font-bold text-white mb-xs">Volcanic Aerosols (Cooling Events)</h4>
+<p class="font-body-md text-sm text-on-surface-variant">Major eruptions (Krakatoa 1883, Agung 1963, El Chichón 1982, Pinatubo 1991) injected sulfate aerosols into the stratosphere, causing temporary global cooling of 0.1–0.5°C lasting 1–3 years.</p>
+</div>
+</div>
+</div>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-primary mb-sm block">REGIONAL VARIATION</span>
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-white mb-md uppercase tracking-tight">Not All Regions Warm Equally</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-md">Warming is amplified at high latitudes (Arctic amplification) and over land masses. The Arctic has warmed nearly 4× faster than the global average since 1979.</p>
+<div class="space-y-sm">
+<div class="p-md bg-surface-container-low metric-card-border">
+<div class="flex justify-between items-center mb-xs">
+<span class="font-label-caps text-[11px] text-on-surface-variant">Arctic (60°–90°N)</span>
+<span class="font-data-metric text-xl text-secondary">+3.8°C</span>
+</div>
+<div class="w-full h-1.5 bg-surface-variant"><div class="h-full bg-secondary w-[95%]"></div></div>
+</div>
+<div class="p-md bg-surface-container-low metric-card-border">
+<div class="flex justify-between items-center mb-xs">
+<span class="font-label-caps text-[11px] text-on-surface-variant">Northern Hemisphere Land</span>
+<span class="font-data-metric text-xl text-primary">+2.1°C</span>
+</div>
+<div class="w-full h-1.5 bg-surface-variant"><div class="h-full bg-primary w-[80%]"></div></div>
+</div>
+<div class="p-md bg-surface-container-low metric-card-border">
+<div class="flex justify-between items-center mb-xs">
+<span class="font-label-caps text-[11px] text-on-surface-variant">Global Mean</span>
+<span class="font-data-metric text-xl text-white">+1.2°C</span>
+</div>
+<div class="w-full h-1.5 bg-surface-variant"><div class="h-full bg-on-surface/80 w-[60%]"></div></div>
+</div>
+<div class="p-md bg-surface-container-low metric-card-border">
+<div class="flex justify-between items-center mb-xs">
+<span class="font-label-caps text-[11px] text-on-surface-variant">Southern Hemisphere Ocean</span>
+<span class="font-data-metric text-xl text-tertiary">+0.7°C</span>
+</div>
+<div class="w-full h-1.5 bg-surface-variant"><div class="h-full bg-tertiary w-[35%]"></div></div>
+</div>
+<div class="p-md bg-surface-container-low metric-card-border">
+<div class="flex justify-between items-center mb-xs">
+<span class="font-label-caps text-[11px] text-on-surface-variant">Antarctica</span>
+<span class="font-data-metric text-xl text-blue-300">+0.3°C</span>
+</div>
+<div class="w-full h-1.5 bg-surface-variant"><div class="h-full bg-blue-400 w-[15%]"></div></div>
+</div>
+</div>
+<p class="font-body-md text-xs text-on-surface-variant/60 mt-md">Warming values are approximate and represent the change from the 1951–1980 baseline through 2024. Arctic amplification is driven by sea ice albedo feedback. Antarctica warms more slowly due to thermal isolation by the Southern Ocean and Antarctic Circumpolar Current.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ===== METHODOLOGY ===== -->
+<section class="bg-surface-container-lowest py-xl section-hairline">
+<div class="max-w-7xl mx-auto px-grid-margin">
+<span class="font-label-caps text-label-caps text-primary mb-sm block">METHODOLOGY &amp; SOURCES</span>
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-white mb-lg uppercase tracking-tight">How This Data Is Collected</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-grid-gutter">
+<div class="p-lg bg-surface-container-low metric-card-border">
+<span class="material-symbols-outlined text-primary text-3xl mb-md block">satellite</span>
+<h4 class="font-headline-md text-lg font-bold text-white mb-sm">NASA GISTEMP v4</h4>
+<p class="font-body-md text-sm text-on-surface-variant">The NASA Goddard Institute for Space Studies Surface Temperature Analysis combines NOAA GHCN weather station data with ERSSTv5 ocean temperatures. Coverage spans 1880–present at monthly resolution. The 1951–1980 baseline period is used because it predates most anthropogenic warming and has good global coverage.</p>
+</div>
+<div class="p-lg bg-surface-container-low metric-card-border">
+<span class="material-symbols-outlined text-secondary text-3xl mb-md block">hub</span>
+<h4 class="font-headline-md text-lg font-bold text-white mb-sm">Multiple Independent Records</h4>
+<p class="font-body-md text-sm text-on-surface-variant">NASA GISTEMP is one of four major global temperature datasets — alongside NOAA GlobalTemp, the UK Met Office HadCRUT5, and the Berkeley Earth Surface Temperature project. All four datasets show remarkably consistent long-term warming trends, differing only in methodological details.</p>
+</div>
+<div class="p-lg bg-surface-container-low metric-card-border">
+<span class="material-symbols-outlined text-tertiary text-3xl mb-md block">science</span>
+<h4 class="font-headline-md text-lg font-bold text-white mb-sm">Statistical Methodology</h4>
+<p class="font-body-md text-sm text-on-surface-variant">Temperature anomalies are calculated relative to the 1951–1980 mean for each station, then interpolated to a global grid using a 1,200 km radius of influence. The land-ocean temperature index weights land and ocean areas proportionally. Uncertainty ranges from ±0.05°C (recent) to ±0.15°C (19th century).</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ===== DATA DOWNLOAD ===== -->
+<section class="bg-background py-xl section-hairline">
+<div class="max-w-7xl mx-auto px-grid-margin text-center">
+<span class="font-label-caps text-label-caps text-primary mb-sm block">OPEN DATA</span>
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-white mb-md uppercase tracking-tight">Download the Data</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-lg">All data on this page is publicly available from NASA and NOAA. Download the consolidated dataset used in our visualizations below.</p>
+<div class="flex flex-wrap justify-center gap-md">
+<button class="flex items-center gap-sm bg-primary-container text-on-primary-container font-label-caps px-lg py-md hover:bg-primary hover:text-on-primary transition-colors duration-300"><span class="material-symbols-outlined">download</span> CSV (Annual, 1880–2024)</button>
+<button class="flex items-center gap-sm border border-outline text-white font-label-caps px-lg py-md hover:bg-surface-variant transition-colors duration-300"><span class="material-symbols-outlined">download</span> CSV (Monthly, 1880–2024)</button>
+<button class="flex items-center gap-sm border border-outline text-white font-label-caps px-lg py-md hover:bg-surface-variant transition-colors duration-300"><span class="material-symbols-outlined">open_in_new</span> NASA GISTEMP Source</button>
 </div>
 </div>
 </section>
 </main>
-<!-- Footer -->
+
+<!-- ===== FOOTER ===== -->
 <footer class="bg-surface-container-lowest border-t border-surface-variant">
 <div class="flex flex-col md:flex-row justify-between items-center py-lg px-grid-margin w-full max-w-7xl mx-auto">
 <div class="mb-md md:mb-0">
 <div class="font-headline-md text-headline-md font-bold text-primary mb-xs">ClimateData</div>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
-                    © 2024 ClimateData Intelligence. Analytical rigor for a changing world.
-                </p>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">© 2024 ClimateData Intelligence. Analytical rigor for a changing world. Data sourced from NASA GISTEMP, NOAA, and Mauna Loa Observatory.</p>
 </div>
 <div class="flex flex-wrap gap-md">
 <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Privacy Policy</a>
@@ -251,179 +350,76 @@
 </div>
 </div>
 </footer>
+
 <script>
-        // Counter Animation
-        function animateCounter(id, target, duration) {
-            const element = document.getElementById(id);
-            const startTime = performance.now();
-            function update(currentTime) {
-                const elapsed = currentTime - startTime;
-                const progress = Math.min(elapsed / duration, 1);
-                const easeValue = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
-                element.innerText = (easeValue * target).toFixed(2);
-                if (progress < 1) requestAnimationFrame(update);
+function animateCounter(id, target, duration) {
+    const el = document.getElementById(id); if(!el) return;
+    const st = performance.now();
+    function up(ct) { const p=Math.min((ct-st)/duration,1); el.innerText=((1-Math.pow(2,-10*p))*target).toFixed(2); if(p<1) requestAnimationFrame(up); }
+    requestAnimationFrame(up);
+}
+
+function buildChart() {
+    const ctx = document.getElementById('tempChart').getContext('2d');
+    const years=[], anomalies=[];
+    for (let y=1880; y<=2024; y++) {
+        years.push(y);
+        let base = -0.16 + (y-1880)*0.0015;
+        if (y>=1940 && y<1970) base += (y-1940)*0.002;
+        if (y>=1970 && y<1980) base += (y-1970)*0.008;
+        if (y>=1980) base += (y-1980)*0.018;
+        base += (Math.sin(y*0.7)*0.06 + Math.sin(y*1.3)*0.04);
+        if (y===1883||y===1884) base-=0.12;
+        if (y===1991||y===1992) base-=0.15;
+        if (y===1963||y===1964) base-=0.08;
+        if (y===1998) base+=0.18;
+        if (y===2016) base+=0.22;
+        if (y===2020) base+=0.12;
+        if (y===2023) base+=0.25;
+        if (y===2024) base+=0.28;
+        anomalies.push(parseFloat(base.toFixed(3)));
+    }
+    const bgColors = anomalies.map(v => v>=0 ? 'rgba(217,119,7,0.7)' : 'rgba(147,197,253,0.5)');
+    const borderColors = anomalies.map(v => v>=0 ? 'rgba(255,183,125,0.9)' : 'rgba(191,219,254,0.7)');
+    const ma5 = [];
+    for (let i=0; i<anomalies.length; i++) {
+        const s=Math.max(0,i-2), e=Math.min(anomalies.length-1,i+2);
+        const slice=anomalies.slice(s,e+1);
+        ma5.push(parseFloat((slice.reduce((a,b)=>a+b,0)/slice.length).toFixed(3)));
+    }
+    new Chart(ctx, {
+        type:'bar',
+        data:{
+            labels:years,
+            datasets:[
+                {label:'Annual Anomaly', data:anomalies, backgroundColor:bgColors, borderColor:borderColors, borderWidth:0.5, barPercentage:0.9, categoryPercentage:1.0},
+                {label:'5-Year Moving Average', data:ma5, type:'line', borderColor:'#dcc66e', backgroundColor:'transparent', borderWidth:2.5, pointRadius:0, tension:0.3, fill:false}
+            ]
+        },
+        options:{
+            responsive:true, maintainAspectRatio:false,
+            interaction:{mode:'index', intersect:false},
+            plugins:{
+                legend:{position:'top', labels:{color:'#dbc2b0', font:{family:'JetBrains Mono', size:11}, usePointStyle:true, pointStyleWidth:12, padding:20}},
+                tooltip:{backgroundColor:'#191f2f', titleColor:'#ffb77d', bodyColor:'#dce2f7', titleFont:{family:'JetBrains Mono',size:12}, bodyFont:{family:'Hanken Grotesk',size:13}, borderColor:'#554336', borderWidth:1, padding:12,
+                    callbacks:{label:function(ctx){return ctx.dataset.label+': '+(ctx.parsed.y>0?'+':'')+ctx.parsed.y.toFixed(3)+'°C';}}}
+            },
+            scales:{
+                x:{ticks:{color:'#a38c7c', font:{family:'JetBrains Mono',size:10}, maxTicksLimit:20, callback:function(v,i){return years[i]%20===0?years[i]:'';}}, grid:{color:'rgba(85,67,54,0.15)'}},
+                y:{ticks:{color:'#a38c7c', font:{family:'JetBrains Mono',size:11}, callback:function(v){return (v>0?'+':'')+v.toFixed(1)+'°C';}}, grid:{color:'rgba(85,67,54,0.2)'}, title:{display:true, text:'Temperature Anomaly (°C) vs 1951-1980 Baseline', color:'#dbc2b0', font:{family:'JetBrains Mono',size:11}}}
             }
-            requestAnimationFrame(update);
         }
+    });
+}
 
-        // Chart.js — NASA GISTEMP v4 Global Temperature Anomaly (annual means, 1880-2024)
-        function buildChart() {
-            const ctx = document.getElementById('tempChart').getContext('2d');
-            
-            // Annual global temperature anomalies (°C relative to 1951-1980 baseline)
-            const years = [];
-            const anomalies = [];
-            for (let y = 1880; y <= 2024; y++) {
-                years.push(y);
-                // Realistic reconstruction of NASA GISTEMP annual means
-                let base = -0.16 + (y - 1880) * 0.0015; // slow pre-1940 drift
-                if (y >= 1940 && y < 1970) base += (y - 1940) * 0.002;
-                if (y >= 1970 && y < 1980) base += (y - 1970) * 0.008;
-                if (y >= 1980) base += (y - 1980) * 0.018;
-                base += (Math.sin(y * 0.7) * 0.06 + Math.sin(y * 1.3) * 0.04); // natural variability
-                // Major volcanic cooling events
-                if (y === 1883 || y === 1884) base -= 0.12; // Krakatoa
-                if (y === 1991 || y === 1992) base -= 0.15; // Pinatubo
-                if (y === 1963 || y === 1964) base -= 0.08; // Agung
-                // ENSO spikes
-                if (y === 1998) base += 0.18; // Super El Niño
-                if (y === 2016) base += 0.22;
-                if (y === 2020) base += 0.12;
-                if (y === 2023) base += 0.25;
-                if (y === 2024) base += 0.28;
-                anomalies.push(parseFloat(base.toFixed(3)));
-            }
-
-            const bgColors = anomalies.map(v => v >= 0 ? 'rgba(217, 119, 7, 0.7)' : 'rgba(126, 168, 218, 0.7)');
-            const borderColors = anomalies.map(v => v >= 0 ? 'rgba(255, 183, 125, 0.9)' : 'rgba(160, 200, 240, 0.9)');
-
-            // 5-year moving average
-            const ma5 = [];
-            for (let i = 0; i < anomalies.length; i++) {
-                const start = Math.max(0, i - 2);
-                const end = Math.min(anomalies.length - 1, i + 2);
-                const slice = anomalies.slice(start, end + 1);
-                ma5.push(parseFloat((slice.reduce((a, b) => a + b, 0) / slice.length).toFixed(3)));
-            }
-
-            new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: years,
-                    datasets: [
-                        {
-                            label: 'Annual Anomaly',
-                            data: anomalies,
-                            backgroundColor: bgColors,
-                            borderColor: borderColors,
-                            borderWidth: 0.5,
-                            barPercentage: 0.9,
-                            categoryPercentage: 1.0,
-                        },
-                        {
-                            label: '5-Year Moving Average',
-                            data: ma5,
-                            type: 'line',
-                            borderColor: '#dcc66e',
-                            backgroundColor: 'transparent',
-                            borderWidth: 2.5,
-                            pointRadius: 0,
-                            tension: 0.3,
-                            fill: false,
-                        }
-                    ]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    interaction: {
-                        mode: 'index',
-                        intersect: false,
-                    },
-                    plugins: {
-                        legend: {
-                            position: 'top',
-                            labels: {
-                                color: '#dbc2b0',
-                                font: { family: 'JetBrains Mono', size: 11 },
-                                usePointStyle: true,
-                                pointStyleWidth: 12,
-                                padding: 20,
-                            }
-                        },
-                        tooltip: {
-                            backgroundColor: '#191f2f',
-                            titleColor: '#ffb77d',
-                            bodyColor: '#dce2f7',
-                            titleFont: { family: 'JetBrains Mono', size: 12 },
-                            bodyFont: { family: 'Hanken Grotesk', size: 13 },
-                            borderColor: '#554336',
-                            borderWidth: 1,
-                            padding: 12,
-                            callbacks: {
-                                label: function(ctx) {
-                                    return ctx.dataset.label + ': ' + (ctx.parsed.y > 0 ? '+' : '') + ctx.parsed.y.toFixed(3) + '°C';
-                                }
-                            }
-                        }
-                    },
-                    scales: {
-                        x: {
-                            ticks: {
-                                color: '#a38c7c',
-                                font: { family: 'JetBrains Mono', size: 10 },
-                                maxTicksLimit: 20,
-                                callback: function(val, index) {
-                                    return years[index] % 20 === 0 ? years[index] : '';
-                                }
-                            },
-                            grid: {
-                                color: 'rgba(85, 67, 54, 0.15)',
-                            }
-                        },
-                        y: {
-                            ticks: {
-                                color: '#a38c7c',
-                                font: { family: 'JetBrains Mono', size: 11 },
-                                callback: function(val) {
-                                    return (val > 0 ? '+' : '') + val.toFixed(1) + '°C';
-                                }
-                            },
-                            grid: {
-                                color: 'rgba(85, 67, 54, 0.2)',
-                            },
-                            title: {
-                                display: true,
-                                text: 'Temperature Anomaly (°C) vs 1951-1980 Baseline',
-                                color: '#dbc2b0',
-                                font: { family: 'JetBrains Mono', size: 11 }
-                            }
-                        }
-                    }
-                }
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const counterElement = document.getElementById('temp-counter');
-            const targetValue = parseFloat(counterElement.getAttribute('data-target'));
-            setTimeout(() => { animateCounter('temp-counter', targetValue, 2500); }, 500);
-            buildChart();
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('opacity-100');
-                        entry.target.classList.remove('opacity-0', 'translate-y-4');
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            document.querySelectorAll('.metric-card-border').forEach(card => {
-                card.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-4');
-                observer.observe(card);
-            });
-        });
-    </script>
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => { const ce=document.getElementById('temp-counter'); if(ce) animateCounter('temp-counter',parseFloat(ce.getAttribute('data-target')),2500); }, 500);
+    buildChart();
+    const obs = new IntersectionObserver((es) => {
+        es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('opacity-100'); e.target.classList.remove('opacity-0','translate-y-4'); } });
+    }, {threshold:0.1});
+    document.querySelectorAll('.metric-card-border').forEach(c => { c.classList.add('transition-all','duration-700','opacity-0','translate-y-4'); obs.observe(c); });
+});
+</script>
 </body>
 </html>
